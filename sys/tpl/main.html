@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="/sys/main.css">
+	<script src="/sys/main.js"></script>
+	<title><?=$title?> - Flowers</title>
+	<link rel ="shortcut icon" type="images/png" href="/sys/favicon.png">
+	<meta name="author" content="Poloz Alexey (polozhev@mail.ru)">
+	<meta name="keywords" content="Заказ цветов">
+	<meta name="description" content="Заказ цветов">
+
+</head>
+<body>
+	<div class="header" onclick="change(this);">
+		<img src="/sys/logo.png" >
+		<a href="/"><div>Главная</div></a>
+		<a href="/competions"><div>Соревнования</div></a>
+		<a href="/participants"><div>Участники</div></a>
+
+	</div>
+
+	<div class="expand" id="menu">
+		<form action="/search" method="post">
+			<input placeholder="Поиск" name="search">
+		</form>
+		<div>
+
+<!--
+{% if user.login %}
+<a href="/cabinet">{{user.login}}</a> &nbsp;<a href="/out" class="del">Выйти</a>
+{% else %}
+<a class="del">Гость &nbsp;</a><a href="/login{% if url %}?url={{ url }}{% endif %}">Войти</a>
+{% endif %}
+!-->
+
+		</div>
+		<a href="/">Главная</a>
+		<a href="/competions">Соревнования</a>
+		<a href="/participants">Участники</a>
+	</div>
+
+<?php include($page); ?>
+
+</body>
+</html>
