@@ -12,6 +12,7 @@ include('sys/main.html');
 <div class="note">
 
 <?php
+include('sys/func.php');
 $db = db('');
 $res = mysqli_query($db, "SELECT * FROM `usl`");
 while ($row = mysqli_fetch_array($res))
