@@ -28,16 +28,16 @@
 		</form>
 		<div>
 
-<!--
-{% if user.login %}
-<a href="/cabinet">{{user.login}}</a> &nbsp;<a href="/out" class="del">Выйти</a>
-{% else %}
-<a class="del">Гость &nbsp;</a><a href="/login{% if url %}?url={{ url }}{% endif %}">Войти</a>
-{% endif %}
-!-->
+<?php
+
+include('func.php');
+$db = db();
+print(mysql_fetch_assoc(mysqli_query($db, "SELECT * FROM `main` WHERE `name`='tel'")));
+
+?>
 
 		</div>
-		<a href="/">Главная</a>
+		<a href="/">Каталог</a>
 		<a href="/competions">Соревнования</a>
 		<a href="/participants">Участники</a>
 	</div>

@@ -12,9 +12,7 @@ include('sys/main.html');
 <div class="notes2">
 
 <?php
-include('sys/func.php');
-$db = db();
-$res = mysqli_query($db, "SELECT * FROM `products`");
+$res = mysqli_query($db, "SELECT * FROM `products` ORDER BY `id` DESC");
 while ($row = mysqli_fetch_array($res))
 	print '<a href="product/' . $row['id'] . '"><div style="background-image: url(load/products/' . $row['id'] . '.jpg">
 	<div class="back">
