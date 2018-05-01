@@ -4,25 +4,20 @@
 				© 2018 Flowerrrs — заказ цветов в Нижнем Новгороде
 			</td><td>
 				<table>
+					<?php
+$res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='tel'");
+while ($row = mysqli_fetch_array($res))
+	print '<tr><td><img src="sys/tel.png"></td><td><a href="tel:' . $row['cont'] . '">' . $row['cont'] . '</a></td></tr>';
+
+$res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='mail'");
+while ($row = mysqli_fetch_array($res))
+	print '<tr><td><img src="sys/mail.png"></td><td><a href="mailto:' . $row['cont'] . '">' . $row['cont'] . '</a></td></tr>';
+
+$res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='geo'");
+while ($row = mysqli_fetch_array($res))
+	print '<tr><td><img src="sys/geo.png"></td><td>' . $row['cont'] . '</td></tr>';
+					?>
 					<tr>
-						<td>
-							<img src="sys/tel.png">
-						</td><td>
-							телефон
-						</td>
-					</tr><tr>
-						<td>
-							<img src="sys/mail.png">
-						</td><td>
-							почта
-						</td>
-					</tr><tr>
-						<td>
-							<img src="sys/geo.png">
-						</td><td>
-							местоположение
-						</td>
-					</tr><tr>
 						<td>
 							<img src="sys/soc.png">
 						</td><td>
