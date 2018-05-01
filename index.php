@@ -10,23 +10,14 @@ include('sys/main.html');
 <div class="info" onclick="change(this);">↑ Нажми на лого ↑</div>
 
 <div class="note">
-	<div>
-		Товар 1
-	</div><div>
-		Товар 2
-	</div><div>
-		Товар 3
-	</div><div>	
-		Товар 4
-	</div><div>
-		Товар 5
-	</div><div>
-		Товар 6
-	</div><div>
-		Товар 7
-	</div><div>
-		Товар 8
-	</div>
+
+<?php
+$db = db('');
+$res = mysqli_query($db, "SELECT * FROM `usl`");
+while ($row = mysqli_fetch_array($res))
+	print '<div>' . $row['name'] . '</div>';
+?>
+
 </div>
 
 </body>
