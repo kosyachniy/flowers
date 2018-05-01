@@ -1,8 +1,12 @@
 function change(min_width=480) {
+	if (document.body.clientWidth <= min_width) {
 		if (document.getElementById('menu').style.display == 'block')
 			document.getElementById('menu').style.display = 'none';
 		else
 			document.getElementById('menu').style.display = 'block';
+	} else {
+		document.location.href = '/';
+	}
 }
 
 function place(elem, count=4, percent=100, margin=0, padding=0, max_width=1500, min_width=480) {
