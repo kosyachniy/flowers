@@ -438,16 +438,46 @@ input[type="file"] {border: 0;}
 
 /* Нижнее поле */
 
-.foot {
-	width: 100%;
-	border-top: 1px solid #000;
-	color: #505050;
+.foot, .foot table, .foot tr, .foot td {
+	border: 0;
 }
 
-.foot div {
-	width: 50%;
+.foot {
+	width: 100%;
+	border-top: 1px solid #505050;
+	color: #505050;
+	font-size: 15px;
+}
+
+.foot > tbody > tr > td {
+	padding: 15px 30px 15px 30px;
+}
+
+.foot > tbody > tr > td:first-child {
+	border-right: 1px solid #505050;
+	width: 70%;
+}
+
+.foot img {
+	height: 11px;
+}
+
+.foot table td:first-child {
+	text-align: right;
+	padding: 1px 11px 1px 0;
+}
+
+/*
+.foot div:first-child {
+	width: 70%;
+	border-right: 1px solid #505050;
 }
 
 .foot div:last-child {
-	text-align: right;
+	margin-left: 10px;
 }
+
+.foot img {
+	height: 11px;
+}
+*/
