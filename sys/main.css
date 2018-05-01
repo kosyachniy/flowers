@@ -132,7 +132,7 @@ input[type="file"] {border: 0;}
 	float: right;
 }
 
-.expand a {
+.expand a, .expand div {
 	color: #fff;
 }
 

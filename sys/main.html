@@ -32,7 +32,10 @@
 
 include('func.php');
 $db = db();
-print(mysql_fetch_assoc(mysqli_query($db, "SELECT * FROM `main` WHERE `name`='tel'")));
+
+$res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='tel'");
+while ($row = mysqli_fetch_array($res))
+	print($row['cont'])
 
 ?>
 

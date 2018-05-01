@@ -19,7 +19,7 @@ while ($row = mysqli_fetch_array($res))
 		<table>
 			<tr>
 				<td>' . $row['name'] . '</td>
-				<td>' . $row['price'] . '</td>
+				<td>' . $row['price'] . '₽</td>
 			</tr>
 		</table>
 	</div>
