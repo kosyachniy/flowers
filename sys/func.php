@@ -64,9 +64,4 @@ function user($type) {
 		}
 	}
 }
-
-function start($title, $source, $description) {
-	act($source, 1);
-	include('main.tpl');
-}
 ?>

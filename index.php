@@ -4,19 +4,28 @@ include('sys/main.html');
 ?>
 
 <script>
-	place('.note', 4, 85, 10, 15)
+	place('.notes2', 4, 85, 10, 15)
 </script>
 
 <div class="info" onclick="change(this);">↑ Нажми на лого ↑</div>
 
-<div class="note">
+<div class="notes2">
 
 <?php
 include('sys/func.php');
-$db = db('');
-$res = mysqli_query($db, "SELECT * FROM `usl`");
+$db = db();
+$res = mysqli_query($db, "SELECT * FROM `products`");
 while ($row = mysqli_fetch_array($res))
-	print '<div>' . $row['name'] . '</div>';
+	print '<a href="product/' . $row['id'] . '"><div style="background-image: url(load/products/' . $row['id'] . '.jpg">
+	<div class="back">
+		<table>
+			<tr>
+				<td>' . $row['name'] . '</td>
+				<td>' . $row['price'] . '</td>
+			</tr>
+		</table>
+	</div>
+</div></a>';
 ?>
 
 </div>
