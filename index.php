@@ -4,7 +4,7 @@ include('sys/main.html');
 ?>
 
 <script>
-	place('.notes2', 4, 85, 10, 15)
+	place('.notes2', 4, 85, 10)
 </script>
 
 <div class="info" onclick="change(this);">↑ Нажми на лого ↑</div>

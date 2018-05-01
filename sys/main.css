@@ -315,14 +315,8 @@ input[type="file"] {border: 0;}
 }
 
 .notes1 a > div {
-	width: 50%;
-	height: 22vw;
-	line-height: 22vw;
-	background: center no-repeat;
-	-moz-background-size: 100%;
-	-webkit-background-size: 100%;
-	-o-background-size: 100%;
-	background-size: 100%;
+	height: 250px;
+	line-height: 250px;
 	text-align: center;
 }
 
@@ -334,8 +328,8 @@ input[type="file"] {border: 0;}
 
 .notes1 .title {
 	color: #fff;
-	font-size: 42px; /* 3 */
-	line-height: 42px; /* 3 */
+	font-size: 3rem;
+	line-height: 3rem;
 	text-align: center;
 	vertical-align: middle;
 	padding: 0 10px 0 10px;
@@ -343,34 +337,9 @@ input[type="file"] {border: 0;}
 
 .notes1 .title div {
 	padding: 0 20px 0 20px;
-	font-size: 20px; /* 1.5 */
-	line-height: 20px; /* 1.5 */
+	font-size: 1.2rem;
+	line-height: 1.2rem;
 	display: block;
-}
-
-@media all and (max-width: 650px) {
-	.notes1 {
-		width: 100vw;
-		margin: 0;
-	}
-
-	.notes1 a > div {
-		width: 100%;
-		height: 56vw;
-		line-height: 56vw;
-	}
-
-	.notes1 .title {
-		/* font-size: 7vw;
-		line-height: 7vw; */
-		font-weight: bold;
-	}
-
-	.notes1 .title div {
-		font-weight: normal;
-		/* font-size: 4.5vw;
-		line-height: 4.5vw; */
-	}
 }
 
 /* Статьи 2го порядка */
@@ -385,7 +354,7 @@ input[type="file"] {border: 0;}
 
 .notes2 .back {
 	width: 80%;
-	height: 60px;
+	height: 40px;
 	margin: 100px 0 0 0;
 	background: rgba(0, 0, 0, 0.6);
 	padding: 10px 10% 10px 10%;
@@ -421,14 +390,7 @@ input[type="file"] {border: 0;}
 }
 
 .notes3 a > div {
-	width: 14vw;
-	height: 14vw;
-	margin: 2vw;
-	background: center no-repeat;
-	-moz-background-size: 100%;
-	-webkit-background-size: 100%;
-	-o-background-size: 100%;
-	background-size: 100%;
+	height: square;
 	border-radius: 50%;
 }
 
@@ -441,7 +403,6 @@ input[type="file"] {border: 0;}
 	background: rgba(0, 0, 0, 0.6);
 	text-align: center;
 	color: #fff;
-	font-size: 16.5px; /* 1.4 */
 	vertical-align: middle;
 	display: flex;
 	align-items: center;
@@ -450,32 +411,6 @@ input[type="file"] {border: 0;}
 .notes3 p {
 	width: 100%;
 }
-
-@media all and (max-width: 650px) {
-	.notes3 a > div {
-		width: 40vw;
-		height: 40vw;
-		margin: 5vw;
-	}
-
-	/* .notes3 .back {
-		font-size: 4vw;
-	} */
-}
-
-
-
-
-/* Статьи */
-
-.note div {
-	background-color: #c0c0c0;
-	height: 160px;
-}
-
-
-
-
 
 /* Информационное сообщение */
 
