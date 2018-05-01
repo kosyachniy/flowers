@@ -17,6 +17,7 @@ td {vertical-align: top;}
 
 div {
 	word-wrap: break-word;
+	overflow: hidden;
 
 	background: center no-repeat;
 	-moz-background-size: cover;
@@ -92,7 +93,6 @@ input[type="file"] {border: 0;}
 	z-index: 9;
 	background-color: #000;
 	color: #fff;
-	overflow: hidden;
 }
 
 .header a {
@@ -141,7 +141,7 @@ input[type="file"] {border: 0;}
 	padding: 16px 0 16px 0;
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 955px) {
 	.expand form, .del {display: none;}
 }
 
