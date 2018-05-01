@@ -143,9 +143,10 @@ input[type="file"] {border: 0;}
 
 @media all and (max-width: 955px) {
 	.expand form, .del {display: none;}
+	.expand {margin-left: 10vw; width: 50vw;}
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 750px) {
 	.expand {display: none;}
 }
 
@@ -362,11 +363,11 @@ input[type="file"] {border: 0;}
 }
 
 .notes2 .back {
-	width: 80%;
+	width: 90%;
 	height: 50px; /* 40px; */
 	margin: 230px 0 0 0; /* 100px 0 0 0; */
 	background: rgba(0, 0, 0, 0.6);
-	padding: 10px 10% 10px 10%;
+	padding: 10px 5% 10px 5%;
 }
 
 .notes2 table {
@@ -433,4 +434,20 @@ input[type="file"] {border: 0;}
 
 @media all and (min-width: 481px) {
 	.info {display: none;}
+}
+
+/* Нижнее поле */
+
+.foot {
+	width: 100%;
+	border-top: 1px solid #000;
+	color: #505050;
+}
+
+.foot div {
+	width: 50%;
+}
+
+.foot div:last-child {
+	text-align: right;
 }

@@ -9,7 +9,7 @@ function change(min_width=480) {
 	}
 }
 
-function place(elem, count=4, percent=100, margin=0, padding=0, max_width=1500, min_width=480) {
+function place(elem, count=4, percent=100, margin=0, padding=0, max_width=1500, min_width=590) {
 	//var width = document.body.clientWidth / count - margin * 2 - padding * 2;
 	var head = document.head || document.getElementsByTagName('head')[0];
 	var style = document.getElementsByTagName('style')[0] || document.createElement('style');
