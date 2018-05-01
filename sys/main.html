@@ -16,9 +16,8 @@
 <body>
 	<div class="header" onclick="change(this);">
 		<img src="/sys/logo.png" >
-		<a href="/"><div>Главная</div></a>
-		<a href="/competions"><div>Соревнования</div></a>
-		<a href="/participants"><div>Участники</div></a>
+		<a href="/"><div>Каталог</div></a>
+		<a href="/basket"><div>Корзина</div></a>
 
 	</div>
 
@@ -26,21 +25,24 @@
 		<form action="/search" method="post">
 			<input placeholder="Поиск" name="search">
 		</form>
-		<div>
 
 <?php
 
 include('func.php');
 $db = db();
 
+$res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='geo'");
+while ($row = mysqli_fetch_array($res))
+	print '<div>' . $row['cont'] . '</div>';
+
 $res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='tel'");
 while ($row = mysqli_fetch_array($res))
-	print '<a href="tel:' . $row['cont'] . '">' . $row['cont'] . '</a>';
+	print '<div><a href="tel:' . $row['cont'] . '">' . $row['cont'] . '</a></div>';
 
 ?>
 
-		</div>
-		<a href="/">Каталог</a>
-		<a href="/competions">Соревнования</a>
-		<a href="/participants">Участники</a>
+		<a href="/" style="margin: 130px 0 0 0;">Каталог</a>
+		<a href="/basket">Корзина</a>
 	</div>
+
+	<div class="info" onclick="change(this);">↑ Нажми на лого ↑</div>

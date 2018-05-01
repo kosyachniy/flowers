@@ -119,10 +119,10 @@ input[type="file"] {border: 0;}
 .expand input {border: 0;}
 
 .expand {
-	width: 45vw;
+	width: calc(60vw + 27px);
 	float: right;
 	position: fixed;
-	left: 55vw;
+	left: calc(40vw - 27px);
 	top: 0;
 	z-index: 10;
 	display: block;
@@ -132,7 +132,7 @@ input[type="file"] {border: 0;}
 	float: right;
 }
 
-.expand a {
+.expand a, .expand div {
 	color: #fff;
 }
 
@@ -178,13 +178,22 @@ input[type="file"] {border: 0;}
 	}
 
 	.expand > div {
-		margin: 0 0 20px 0;
 		width: calc(100vw - 15px);
 	}
 
 	.expand > a {
 		display: block;
 	}
+
+	/*
+	.expand > div:last-child {
+		margin: 0 0 20px 0;
+	}
+
+	.expand > a:first-child {
+		margin: 130px 0 0 0;
+	}
+	*/
 }
 
 .header a div:hover, .expand > a:hover {
@@ -349,13 +358,13 @@ input[type="file"] {border: 0;}
 }
 
 .notes2 a > div {
-	height: 160px;
+	height: 300px; /* 160px; */
 }
 
 .notes2 .back {
 	width: 80%;
-	height: 40px;
-	margin: 100px 0 0 0;
+	height: 50px; /* 40px; */
+	margin: 230px 0 0 0; /* 100px 0 0 0; */
 	background: rgba(0, 0, 0, 0.6);
 	padding: 10px 10% 10px 10%;
 }
@@ -371,14 +380,14 @@ input[type="file"] {border: 0;}
 
 .notes2 td:first-child {
 	width: 90%;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	color: #fff;
 }
 
 .notes2 td:last-child {
 	width: 10%;
 	text-align: right;
-	font-size: 1.7rem;
+	font-size: 2rem;
 	color: #3cc051;
 }
 
