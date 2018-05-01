@@ -35,7 +35,7 @@ $db = db();
 
 $res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='tel'");
 while ($row = mysqli_fetch_array($res))
-	print($row['cont'])
+	print '<a href="tel:' . $row['cont'] . '">' . $row['cont'] . '</a>';
 
 ?>
 
