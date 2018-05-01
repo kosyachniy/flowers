@@ -19,10 +19,10 @@ div {
 	word-wrap: break-word;
 
 	background: center no-repeat;
-	-moz-background-size: 100%;
-	-webkit-background-size: 100%;
-	-o-background-size: 100%;
-	background-size: 100%;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 /* Отступы */
@@ -345,7 +345,7 @@ input[type="file"] {border: 0;}
 /* Статьи 2го порядка */
 
 .notes2 {
-	margin: 40px 0 40px 0;
+	margin: 10px 0 40px 0;
 }
 
 .notes2 a > div {

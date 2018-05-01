@@ -1,5 +1,5 @@
 function change(min_width=425) {
-	if (screen.width <= 425) {
+	if (document.body.clientWidth <= 425) {
 		if (document.getElementById('menu').style.display == 'block')
 			document.getElementById('menu').style.display = 'none';
 		else
