@@ -10,7 +10,6 @@ function change(min_width=480) {
 }
 
 function place(elem, count=4, percent=100, margin=0, padding=0, max_width=1500, min_width=590) {
-	//var width = document.body.clientWidth / count - margin * 2 - padding * 2;
 	var head = document.head || document.getElementsByTagName('head')[0];
 	var style = document.getElementsByTagName('style')[0] || document.createElement('style');
 
@@ -29,4 +28,49 @@ function place(elem, count=4, percent=100, margin=0, padding=0, max_width=1500, 
 	style.appendChild(document.createTextNode(css));
 
 	head.appendChild(style);
+}
+
+function setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	var expires = "expires="+d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+function basketon(elem, num) {
+	//elem.style = 'background-color: #cdfe29; border: 0; margin: 16px 0 11px 1px;';
+	elem.setAttribute('class', 'active');
+	elem.setAttribute('onclick', 'basketoff(this, ' + num + ')');
+	setCookie('basket', getCookie('basket') + num + ',', 14);
+}
+
+function basketoff(elem, num) {
+	//elem.style = 'background-color: #fff; border: 1px solid #000; margin: 15px 0 10px 0;';
+	elem.setAttribute('class', '');
+	elem.setAttribute('onclick', 'basketon(this, ' + num + ')');
+	var x = getCookie('basket').split(',');
+	//x = remove(x, num.toString());
+	//x = x.splice(x.indexOf(num.toString()), 1);
+	var y = num.toString();
+	for (var i=0; i<x.length; i++) {
+		if (x[i] == y) {
+			delete x[i];
+		}
+	}
+	setCookie('basket', x.join(','), 14);
 }

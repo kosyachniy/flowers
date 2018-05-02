@@ -3,6 +3,8 @@ $title = 'Заказ цветов';
 include('sys/head.html');
 ?>
 
+<div class="info" onclick="change();">↑ Нажми на лого ↑</div>
+
 <script>
 	place('.notes2', 3, 85, 20);
 </script>

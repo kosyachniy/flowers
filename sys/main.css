@@ -143,10 +143,10 @@ input[type="file"] {border: 0;}
 
 @media all and (max-width: 955px) {
 	.expand form, .del {display: none;}
-	.expand {margin-left: 10vw; width: 50vw;}
+	.expand {left: 50vw; width: 50vw;}
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 700px) {
 	.expand {display: none;}
 }
 
@@ -422,6 +422,60 @@ input[type="file"] {border: 0;}
 	width: 100%;
 }
 
+/* Статья */
+
+.note {
+	width: calc(100% - 20px);
+	padding: 0 10px 20px 10px;
+	/* background-color: #fff; */
+}
+
+.note h1 {
+	width: 100%;
+	text-align: center;
+}
+
+.note img {
+	width: calc(100% + 20px);
+	margin: 0 0 0 -10px;
+}
+
+.note div {
+	width: calc(100% - 32px);
+	padding: 15px;
+	font-size: 1.5rem;
+	border-radius: 15px;
+	text-align: center;
+}
+
+.note div:not(.active) {
+	margin: 15px 0 10px 0;
+	border: 1px solid #000;
+}
+
+.note div:hover, .active {
+	background-color: #cdfe29;
+	border: 0;
+	margin: 16px 0 11px 1px;
+	cursor: pointer;
+}
+
+.note div:active {
+	margin: 15px 0 10px 0;
+	border: 1px solid #000;
+}
+
+@media all and (min-width: 1000px) {
+	/* body {
+		background-color: #edeef0;
+	} */
+
+	.note {
+		width: 1000px;
+		margin-left: calc(50vw - 500px - 20px);
+	}
+}
+
 /* Информационное сообщение */
 
 .info {
@@ -445,8 +499,11 @@ input[type="file"] {border: 0;}
 .foot {
 	width: 100%;
 	border-top: 1px solid #505050;
-	color: #505050;
 	font-size: 15px;
+}
+
+.foot, .foot a {
+	color: #505050;
 }
 
 .foot > tbody > tr > td {
@@ -466,18 +523,3 @@ input[type="file"] {border: 0;}
 	text-align: right;
 	padding: 1px 11px 1px 0;
 }
-
-/*
-.foot div:first-child {
-	width: 70%;
-	border-right: 1px solid #505050;
-}
-
-.foot div:last-child {
-	margin-left: 10px;
-}
-
-.foot img {
-	height: 11px;
-}
-*/
