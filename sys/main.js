@@ -40,7 +40,7 @@ function setCookie(cname, cvalue, exdays) {
 function getCookie(cname) {
 	var name = cname + "=";
 	var ca = document.cookie.split(';');
-	for(var i = 0; i < ca.length; i++)
+	for(var i = 0; i < ca.length; i++) {
 		var c = ca[i];
 		while (c.charAt(0) == ' ') {
 			c = c.substring(1);
@@ -52,24 +52,27 @@ function getCookie(cname) {
 	return "";
 }
 
+function deleteCookie(cname) {
+	document.cookie = cname + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
 function basketon(elem, num) {
 	elem.setAttribute('class', 'active');
 	elem.setAttribute('onclick', 'basketoff(this, ' + num + ')');
 
-	var x = getCookie('basket');
-	if (x) {
-		x += ',';
-	}
-	x = x + num.toString();
-
+	var x = getCookie('basket') + num.toString() + '-';
+	//x = JSON.stringify([1,2]);
+	deleteCookie('basket');
+	//alert(getCookie('basket'));
 	setCookie('basket', x, 14); //$.cookie('basket', x, {expires: 14, path: '/'});
+	//alert(x);
+	alert(getCookie('basket'));
 }
 
 function basketoff(elem, num) {
-	//elem.style = 'background-color: #fff; border: 1px solid #000; margin: 15px 0 10px 0;';
 	elem.setAttribute('class', '');
 	elem.setAttribute('onclick', 'basketon(this, ' + num + ')');
-	var x = getCookie('basket').split(',');
+	var x = getCookie('basket').split('-');
 	//x = remove(x, num.toString());
 	//x = x.splice(x.indexOf(num.toString()), 1);
 	var y = num.toString();
@@ -78,5 +81,5 @@ function basketoff(elem, num) {
 			delete x[i];
 		}
 	}
-	setCookie('basket', x.join(','), 14);
+	setCookie('basket', x.join('-'), 14);
 }
