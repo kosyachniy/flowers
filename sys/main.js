@@ -56,8 +56,16 @@ function basketon(elem, num) {
 	//elem.style = 'background-color: #cdfe29; border: 0; margin: 16px 0 11px 1px;';
 	elem.setAttribute('class', 'active');
 	elem.setAttribute('onclick', 'basketoff(this, ' + num + ')');
-	setCookie('basket', getCookie('basket') + num + ',', 14);
-	$.cookie("people", "123");
+	
+	/*
+	var basket = getCookie('basket');
+
+	if (basket) {
+		var arr = JSON.parse(basket) + [];
+	}
+	*/
+
+	setCookie('basket', getCookie('basket') + num.toString() + ',', 14);
 }
 
 function basketoff(elem, num) {

@@ -15,6 +15,7 @@ while ($row = mysqli_fetch_array($res)) {
 	if ($row['cont']) print '<br><br>' . $row['cont'];
 
 	print '<script>
+//alert(JSON.stringify([1,2,3]));
 $.cookie(\'name\', \'value\', { expires: 7, path: \'/\' });
 alert(getCookie(\'basket\'));
 var x = ' . $row['id'] . ';
