@@ -40,7 +40,7 @@ function setCookie(cname, cvalue, exdays) {
 function getCookie(cname) {
 	var name = cname + "=";
 	var ca = document.cookie.split(';');
-	for(var i = 0; i < ca.length; i++) {
+	for(var i = 0; i < ca.length; i++)
 		var c = ca[i];
 		while (c.charAt(0) == ' ') {
 			c = c.substring(1);
@@ -53,19 +53,16 @@ function getCookie(cname) {
 }
 
 function basketon(elem, num) {
-	//elem.style = 'background-color: #cdfe29; border: 0; margin: 16px 0 11px 1px;';
 	elem.setAttribute('class', 'active');
 	elem.setAttribute('onclick', 'basketoff(this, ' + num + ')');
-	
-	/*
-	var basket = getCookie('basket');
 
-	if (basket) {
-		var arr = JSON.parse(basket) + [];
+	var x = getCookie('basket');
+	if (x) {
+		x += ',';
 	}
-	*/
+	x = x + num.toString();
 
-	setCookie('basket', getCookie('basket') + num.toString() + ',', 14);
+	setCookie('basket', x, 14); //$.cookie('basket', x, {expires: 14, path: '/'});
 }
 
 function basketoff(elem, num) {
