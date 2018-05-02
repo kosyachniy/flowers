@@ -17,9 +17,9 @@ while ($row = mysqli_fetch_array($res)) {
 	print '<script>
 var x = ' . $row['id'] . ';
 if (getCookie(\'basket\').split(\'-\').indexOf(x.toString()) != -1) {
-	document.write(\'<div onclick="basketoff(this, ' . $row['id'] . ');" class="active">Добавлено в корзину (' . $row['price'] . '₽)</div>\');
+	document.write(\'<div onclick="basketoff(this, ' . $row['id'] . ', ' . $row['price'] . ');" class="active">Добавлено в корзину (' . $row['price'] . '₽)</div>\');
 } else {
-	document.write(\'<div onclick="basketon(this, ' . $row['id'] . ');">Добавить в корзину (' . $row['price'] . '₽)</div>\');
+	document.write(\'<div onclick="basketon(this, ' . $row['id'] . ', ' . $row['price'] . ');">Добавить в корзину (' . $row['price'] . '₽)</div>\');
 }
 </script>
 </div>';

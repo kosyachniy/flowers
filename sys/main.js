@@ -56,18 +56,21 @@ function deleteCookie(cname) {
 	document.cookie = cname + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
-function basketon(elem, num) {
+function basketon(elem, num, price) {
 	elem.setAttribute('class', 'active');
-	elem.setAttribute('onclick', 'basketoff(this, ' + num + ')');
+	elem.setAttribute('onclick', 'basketoff(this, ' + num + ', ' + price + ')');
+	elem.innerHTML = 'Добавлено в корзину (' + price + '₽)';
 
-	var x = getCookie('basket') + num.toString() + '-';
+	var x = getCookie('basket') + num + '-';
 	deleteCookie('basket');
 	setCookie('basket', x, 14); //$.cookie('basket', x, {expires: 14, path: '/'});
 }
 
-function basketoff(elem, num) {
+function basketoff(elem, num, price) {
 	elem.setAttribute('class', '');
-	elem.setAttribute('onclick', 'basketon(this, ' + num + ')');
+	elem.setAttribute('onclick', 'basketon(this, ' + num + ', ' + price + ')');
+	elem.innerHTML = 'Добавить в корзину (' + price + '₽)';
+
 	var x = getCookie('basket').split('-');
 	//x = remove(x, num.toString());
 	//x = x.splice(x.indexOf(num.toString()), 1);
