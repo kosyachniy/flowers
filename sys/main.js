@@ -61,12 +61,8 @@ function basketon(elem, num) {
 	elem.setAttribute('onclick', 'basketoff(this, ' + num + ')');
 
 	var x = getCookie('basket') + num.toString() + '-';
-	//x = JSON.stringify([1,2]);
 	deleteCookie('basket');
-	//alert(getCookie('basket'));
 	setCookie('basket', x, 14); //$.cookie('basket', x, {expires: 14, path: '/'});
-	//alert(x);
-	alert(getCookie('basket'));
 }
 
 function basketoff(elem, num) {
