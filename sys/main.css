@@ -453,16 +453,14 @@ input[type="file"] {border: 0;}
 	border: 1px solid #000;
 }
 
-.note div:hover, .active {
-	background-color: #cdfe29;
-	border: 0;
-	margin: 16px 0 11px 1px;
+.note div:hover {
 	cursor: pointer;
 }
 
-.note div:active {
-	margin: 15px 0 10px 0;
-	border: 1px solid #000;
+/* .note div:hover, */ .active {
+	background-color: #cdfe29;
+	border: 0;
+	margin: 16px 0 11px 1px;
 }
 
 @media all and (min-width: 1000px) {

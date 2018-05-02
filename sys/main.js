@@ -33,7 +33,7 @@ function place(elem, count=4, percent=100, margin=0, padding=0, max_width=1500, 
 function setCookie(cname, cvalue, exdays) {
 	var d = new Date();
 	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-	var expires = "expires="+d.toUTCString();
+	var expires = "expires=" + d.toUTCString();
 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
@@ -57,6 +57,7 @@ function basketon(elem, num) {
 	elem.setAttribute('class', 'active');
 	elem.setAttribute('onclick', 'basketoff(this, ' + num + ')');
 	setCookie('basket', getCookie('basket') + num + ',', 14);
+	$.cookie("people", "123");
 }
 
 function basketoff(elem, num) {
