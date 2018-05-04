@@ -25,7 +25,9 @@ while ($row = mysqli_fetch_array($res)) {
 	var basket = getCookie('basket').split('-');
 	for (var i in basket) {
 		if (basket[i]) {
-			document.getElementById(basket[i]).style.display = 'inline-block';
+			var x = document.getElementById(basket[i]);
+			if (x)
+				x.style.display = 'inline-block';
 		}
 	}
 </script>
