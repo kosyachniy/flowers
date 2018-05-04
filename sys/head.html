@@ -1,3 +1,13 @@
+<?php
+
+include('func.php');
+$db = db();
+
+$res = mysqli_query($db, "SELECT * FROM `main`");
+while ($row = mysqli_fetch_array($res))
+	$set[$row['name']] = $row['cont'];
+
+?>
 <!Doctype html>
 <html>
 <head>
@@ -6,7 +16,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" type="text/css" href="/sys/main.css">
 	<script src="/sys/main.js"></script>
-	<title><?=$title?> - Flowers</title>
+	<title><?=$title?> - <?=$set['name']?></title>
 	<link rel ="shortcut icon" type="images/png" href="/sys/favicon.png">
 	<meta name="author" content="Poloz Alexey (polozhev@mail.ru)">
 	<meta name="keywords" content="Заказ цветов">
@@ -25,22 +35,8 @@
 		<form action="/search" method="post">
 			<input placeholder="Поиск" name="search">
 		</form>
-
-<?php
-
-include('func.php');
-$db = db();
-
-$res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='geo'");
-while ($row = mysqli_fetch_array($res))
-	print '<div>' . $row['cont'] . '</div>';
-
-$res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='tel'");
-while ($row = mysqli_fetch_array($res))
-	print '<div><a href="tel:' . $row['cont'] . '">' . $row['cont'] . '</a></div>';
-
-?>
-
+		<div><?=$set['geo']?></div>
+		<div><a href="tel:<?=$set['tel']?>"><?=$set['tel']?></a></div>
 		<a href="/" style="margin: 130px 0 0 0;">Каталог</a>
 		<a href="/basket">Корзина</a>
 	</div>

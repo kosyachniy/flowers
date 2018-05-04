@@ -1,13 +1,10 @@
 	<table class="foot">
 		<tr>
 			<td>
-				© 2018 Flowerrrs — заказ цветов в Нижнем Новгороде<br>
+				© <?=date('Y')?> <?=$set['name']?> — заказ цветов в Нижнем Новгороде<br>
 				<?php
-$res = mysqli_query($db, "SELECT * FROM `main`");
-while ($row = mysqli_fetch_array($res))
-	$set[$row['name']] = $row['cont'];
+if ($set['geo']) print '<div class="leap"><img src="/sys/geo.png"> &nbsp;' . $set['geo'] . ' (c ' . $set['timestart'] . ' до ' . $set['timestop'] . ')</div>';
 
-if ($set['geo']) print '<img src="/sys/geo.png"> &nbsp;' . $set['geo'] . ' (c ' . $set['timestart'] . ' до ' . $set['timestop'] . ')'
 				?>
 			</td><td>
 				<table>
@@ -15,6 +12,8 @@ if ($set['geo']) print '<img src="/sys/geo.png"> &nbsp;' . $set['geo'] . ' (c ' 
 if ($set['tel']) print '<tr><td><img src="/sys/tel.png"></td><td><a href="tel:' . $row['cont'] . '">' . $set['tel'] . '</a></td></tr>';
 
 if ($set['mail']) print '<tr><td><img src="/sys/mail.png"></td><td><a href="mailto:' . $row['cont'] . '">' . $set['mail'] . '</a></td></tr>';
+
+if ($set['geo']) print '<tr class="leap"><td><img src="/sys/geo.png"></td><td>' . $set['geo'] . ' (c ' . $set['timestart'] . ' до ' . $set['timestop'] . ')</td></tr>';
 					?>
 					<tr>
 						<td>

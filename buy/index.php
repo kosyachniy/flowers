@@ -5,11 +5,6 @@ include('sys/head.html');
 
 <div class="info" onclick="change();">↑ Нажми на лого ↑</div>
 
-<style>
-	form {width: 100%;}
-	input {display: inline-block; width: 90%;}
-</style>
-
 <?php
 if ($_SESSION['admin'] == 1) {
 	$res = mysqli_query($db, "SELECT * FROM `main`");
@@ -18,16 +13,16 @@ if ($_SESSION['admin'] == 1) {
 	}
 
 	print '<div style="margin-left: 10%; width: 80%">
-<h2>Панель администратора</h2>
-<form action="edit.php" method="post" style="width: 100%;">
+<h1>Панель администратора</h1>
+<form action="edit.php" method="post">
 	<input name="tel" placeholder="Телефон" value="' . $set['tel'] . '">
-	<input name="mail" placeholder="Почта" value="' . $set['mail'] . '" style="width: 40%;"> (На эту же почту будет приходить информация о заказах)<br>
-	<input name="geo" placeholder="Местоположение" value="' . $set['geo'] . '" style="width: 50%;">
+	<input name="mail" placeholder="Почта" value="' . $set['mail'] . '" style="width: 50%;"> (На эту же почту будет приходить информация о заказах)
+	<input name="geo" placeholder="Местоположение" value="' . $set['geo'] . '">
 	с <input name="timestart" value="' . $set['timestart'] . '" style="width: 50px;"> до <input name="timestop" value="' . $set['timestop'] . '" style="width: 50px;">
 	<input name="vk" placeholder="Ссылка на ВКонтакте" value="' . $set['vk'] . '">
 	<input name="insta" placeholder="Ссылка на инстаграмм" value="' . $set['insta'] . '">
-	<input type="submit" value="Сохранить" style="width: 93%;"><br><br>
-	<a href="out.php" style="color: red; font-size: 1.8rem; text-decoration: underline;">Выйти из режима администратора</a><br>
+	<input type="submit" value="Сохранить">
+	<a href="out.php" style="color: red;">Выйти</a>
 </form>
 </div>'; 
 }

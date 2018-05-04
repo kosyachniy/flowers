@@ -474,6 +474,25 @@ input[type="file"] {border: 0;}
 	}
 }
 
+/* Кнопка */
+
+.act {
+	width: calc(80% - 30px);
+	margin: -20px 0 30px 10%;
+	padding: 15px;
+	font-size: 1.5rem;
+	border-radius: 15px;
+	text-align: center;
+	color: #fff;
+	background-color: #ff2400;
+}
+
+.act:hover {
+	color: #000;
+	background-color: #cdfe29;
+	cursor: pointer;
+}
+
 /* Информационное сообщение */
 
 .info {
@@ -520,4 +539,11 @@ input[type="file"] {border: 0;}
 .foot table td:first-child {
 	text-align: right;
 	padding: 1px 11px 1px 0;
+}
+
+tr.leap {display: none;}
+
+@media all and (max-width: 500px) {
+	div.leap {display: none;}
+	tr.leap {display: table-row;}
 }
