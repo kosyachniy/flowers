@@ -8,6 +8,13 @@ include('sys/head.html');
 <style>
 	form {width: 100%;}
 	input {display: inline-block; width: 90%;}
+
+	.mail {width: 40%;}
+	.geo {width: 50%;}
+
+	@media all and (max-width: 635px) {
+		.mail, .geo {width: 90%; display: block;}
+	}
 </style>
 
 <?php
@@ -19,10 +26,11 @@ if ($_SESSION['admin'] == 1) {
 
 	print '<div style="margin-left: 10%; width: 80%">
 <h2>Панель администратора</h2>
-<form action="edit.php" method="post" style="width: 100%;">
+<form action="edit.php" method="post">
+	<input name="name" placeholder="Название компании" value="' . $set['name'] . '">
 	<input name="tel" placeholder="Телефон" value="' . $set['tel'] . '">
-	<input name="mail" placeholder="Почта" value="' . $set['mail'] . '" style="width: 40%;"> (На эту же почту будет приходить информация о заказах)<br>
-	<input name="geo" placeholder="Местоположение" value="' . $set['geo'] . '" style="width: 50%;">
+	<input name="mail" placeholder="Почта" value="' . $set['mail'] . '" class="mail"> (На эту же почту будет приходить информация о заказах)<br>
+	<input name="geo" placeholder="Местоположение" value="' . $set['geo'] . '" class="geo">
 	с <input name="timestart" value="' . $set['timestart'] . '" style="width: 50px;"> до <input name="timestop" value="' . $set['timestop'] . '" style="width: 50px;">
 	<input name="vk" placeholder="Ссылка на ВКонтакте" value="' . $set['vk'] . '">
 	<input name="insta" placeholder="Ссылка на инстаграмм" value="' . $set['insta'] . '">
