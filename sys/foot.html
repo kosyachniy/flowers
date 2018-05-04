@@ -1,27 +1,30 @@
 	<table class="foot">
 		<tr>
 			<td>
-				© 2018 Flowerrrs — заказ цветов в Нижнем Новгороде
+				© 2018 Flowerrrs — заказ цветов в Нижнем Новгороде<br>
+				<?php
+$res = mysqli_query($db, "SELECT * FROM `main`");
+while ($row = mysqli_fetch_array($res))
+	$set[$row['name']] = $row['cont'];
+
+if ($set['geo']) print '<img src="/sys/geo.png"> &nbsp;' . $set['geo'] . ' (c ' . $set['timestart'] . ' до ' . $set['timestop'] . ')'
+				?>
 			</td><td>
 				<table>
 					<?php
-$res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='tel'");
-while ($row = mysqli_fetch_array($res))
-	print '<tr><td><img src="/sys/tel.png"></td><td><a href="tel:' . $row['cont'] . '">' . $row['cont'] . '</a></td></tr>';
+if ($set['tel']) print '<tr><td><img src="/sys/tel.png"></td><td><a href="tel:' . $row['cont'] . '">' . $set['tel'] . '</a></td></tr>';
 
-$res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='mail'");
-while ($row = mysqli_fetch_array($res))
-	print '<tr><td><img src="/sys/mail.png"></td><td><a href="mailto:' . $row['cont'] . '">' . $row['cont'] . '</a></td></tr>';
-
-$res = mysqli_query($db, "SELECT * FROM `main` WHERE `name`='geo'");
-while ($row = mysqli_fetch_array($res))
-	print '<tr><td><img src="/sys/geo.png"></td><td>' . $row['cont'] . '</td></tr>';
+if ($set['mail']) print '<tr><td><img src="/sys/mail.png"></td><td><a href="mailto:' . $row['cont'] . '">' . $set['mail'] . '</a></td></tr>';
 					?>
 					<tr>
 						<td>
 							<img src="/sys/soc.png">
 						</td><td>
-							Мы в соцсетях: &nbsp;<img src="/sys/vk.png"> <img src="/sys/insta.png">
+							Мы в соцсетях:&nbsp;
+							<?php
+if ($set['vk']) print '<a href="' . $set['vk'] . '"><img src="/sys/vk.png"></a> ';
+if ($set['insta']) print '<a href="' . $set['insta'] . '"><img src="/sys/insta.png"></a> ';
+							?>
 						</td>
 					</tr>
 				</table>

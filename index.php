@@ -5,6 +5,26 @@ include('sys/head.html');
 
 <div class="info" onclick="change();">↑ Нажми на лого ↑</div>
 
+<?php
+if ($_SESSION['admin'] == 1) {
+	$res = mysqli_query($db, "SELECT * FROM `main`");
+	while ($row = mysqli_fetch_array($res)) {
+		$set[$row['name']] = $row['cont'];
+	}
+
+	print '<form action="edit.php" method="post">
+	<input name="tel" placeholder="Телефон" value="' . $set['tel'] . '">
+	<input name="mail" placeholder="Почта" value="' . $set['mail'] . '"> (На эту же почту будет приходить информация о заказах)
+	<input name="geo" placeholder="Местоположение" value="' . $set['geo'] . '">
+	с <input name="timestart" value="' . $set['timestart'] . '"> до <input name="timestop" value="' . $set['timestop'] . '">
+	<input name="vk" placeholder="Ссылка на ВКонтакте" value="' . $set['vk'] . '">
+	<input name="insta" placeholder="Ссылка на инстаграмм" value="' . $set['insta'] . '">
+	<input type="submit" value="Сохранить">
+	<a href="out.php" color="red">Выйти</a>
+</form>'; 
+}
+?>
+
 <script>
 	place('.notes2', 3, 85, 20);
 </script>
@@ -13,18 +33,10 @@ include('sys/head.html');
 
 <?php
 $res = mysqli_query($db, "SELECT * FROM `products` ORDER BY `id` DESC");
-while ($row = mysqli_fetch_array($res))
-	print '<a href="product/?i=' . $row['id'] . '"><div style="background-image: url(load/products/' . $row['id'] . '.jpg);">
-	<div style="background: url(sys/back2.jpg) repeat; opacity: 0.8; position: relative; width: 100%; height: 70px; top: 230px;"></div>
-	<div class="back" style="background: none; position: relative; top: -70px;">
-		<table>
-			<tr>
-				<td style="font-size: 1.2rem;">' . $row['name'] . '</td>
-				<td style="color: #cdfe29;">' . $row['price'] . '₽</td>
-			</tr>
-		</table>
-	</div>
-</div></a>';
+while ($row = mysqli_fetch_array($res)) {
+	$d = '"';
+	include('sys/middle.html');
+}
 ?>
 
 </div>
