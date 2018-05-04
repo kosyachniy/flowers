@@ -34,7 +34,6 @@ if ($_SESSION['admin'] == 1) {
 <?php
 $res = mysqli_query($db, "SELECT * FROM `products` ORDER BY `id` DESC");
 while ($row = mysqli_fetch_array($res)) {
-	$d = '"';
 	include('sys/middle.html');
 }
 ?>

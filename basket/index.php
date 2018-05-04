@@ -12,25 +12,21 @@ include('../sys/head.html');
 <div class="notes2">
 
 <?php
+$basket = explode('-', $_COOKIE['basket']);
+//print_r($basket);
+// for ($i=0; $i<sizeof($basket); $i++) {
+// 	print($basket[$i]);
+// }
+
 $res = mysqli_query($db, "SELECT * FROM `products`");
 while ($row = mysqli_fetch_array($res)) {
-	$d = 'display: none;" id="' . $row['id'] . '"';
-	include('../sys/middle.html');
+	if (in_array($row['id'], $basket)) {
+		include('../sys/middle.html');
+	}
 }
 ?>
 
 </div>
-
-<script>
-	var basket = getCookie('basket').split('-');
-	for (var i in basket) {
-		if (basket[i]) {
-			var x = document.getElementById(basket[i]);
-			if (x)
-				x.style.display = 'inline-block';
-		}
-	}
-</script>
 
 <?php
 include('../sys/foot.html');
