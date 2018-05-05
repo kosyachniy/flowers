@@ -441,7 +441,16 @@ input[type="file"] {border: 0;}
 	margin: 0 0 0 -10px;
 }
 
-.note div {
+.note div:first-of-type {
+	width: 30%;
+}
+
+.note div:nth-of-type(2) {
+	width: calc(70% - 40px);
+	padding: 0 0 0 20px;
+}
+
+.button{
 	width: calc(100% - 32px);
 	padding: 15px;
 	font-size: 1.5rem;
@@ -449,12 +458,12 @@ input[type="file"] {border: 0;}
 	text-align: center;
 }
 
-.note div:not(.active) {
+.button:not(.active) {
 	margin: 15px 0 10px 0;
 	border: 1px solid #000;
 }
 
-.note div:hover {
+.button:hover {
 	cursor: pointer;
 }
 
