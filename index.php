@@ -19,11 +19,6 @@ include('sys/head.html');
 
 <?php
 if ($_SESSION['admin'] == 1) {
-	$res = mysqli_query($db, "SELECT * FROM `main`");
-	while ($row = mysqli_fetch_array($res)) {
-		$set[$row['name']] = $row['cont'];
-	}
-
 	print '<div style="margin-left: 10%; width: 80%">
 <h2>Панель администратора</h2>
 <form action="edit.php" method="post">
