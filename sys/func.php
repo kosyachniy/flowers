@@ -8,4 +8,16 @@ function db($name='main') {
 	mysqli_query($db, 'SET names "utf8"');
 	return $db;
 }
+
+function nl2p($string) {
+	$paragraphs = '';
+
+	foreach (explode("\n", $string) as $line) {
+		if (trim($line)) {
+			$paragraphs .= '<p>' . $line . '</p>';
+		}
+	}
+
+	return $paragraphs;
+}
 ?>
