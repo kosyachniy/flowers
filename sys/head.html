@@ -33,7 +33,7 @@ while ($row = mysqli_fetch_array($res))
 
 	<div class="expand" id="menu" style="background: url(/sys/back2.jpg) repeat;">
 		<form action="/search" method="get">
-			<input placeholder="Поиск" name="i">
+			<input placeholder="Поиск" name="i" required>
 		</form>
 		<div><?=$set['geo']?></div>
 		<div><a href="tel:<?=$set['tel']?>"><?=$set['tel']?></a></div>

@@ -37,11 +37,13 @@ while ($row = mysqli_fetch_array($res)) {
 print '</table>
 <h4>Общая сумма заказа: ' . $sum . '₽</h4>
 <form action="/order/index.php" method="post">
-	<input name="name" placeholder="Ваше имя">
+	<input name="name" placeholder="Ваше имя" required>
 	<input name="surname" placeholder="Ваша фамилия">
-	<input name="tel" placeholder="Номер телефона">
+	<input name="tel" placeholder="Номер телефона" required>
 	<input name="geo" placeholder="Адрес доставки""><br>
-	Доставить в промежутке времени с <input name="timestart" style="width: 50px;"> до <input name="timestop" style="width: 50px;">
+	<input name="times" placeholder="Дата и время доставки" required><br>
+	Ваш комментарий нам:<br>
+	<textarea name="descr"></textarea>
 	<input type="submit" value="Заказать" style="width: 93%; margin-bottom: 15px;"><br>
 </form>
 </div>'; 
