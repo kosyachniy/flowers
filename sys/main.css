@@ -445,8 +445,12 @@ input[type="file"] {border: 0;}
 	width: 30%;
 }
 
+.note-img img {
+	width: 100%;
+}
+
 .note-cont {
-	width: calc(70% - 100px);
+	width: calc(70% - 50px);
 	padding: 0 0 0 50px;
 }
 
@@ -456,13 +460,23 @@ input[type="file"] {border: 0;}
 
 .note-cont div:first-child {
 	color: #505050;
-	font-size: 0.95rem;
-	margin: 10px 20px 15px 0;
+	font-size: 0.85rem;
+	margin: 10px 0 10px 10px;
+	font-style: italic;
 }
 
 .note-cont div:last-child {
-	text-align: left;
-	margin: 0 0 0 20px;
+	text-align: justify;
+	font-size: 0.95rem;
+}
+
+.note-cont p {
+	text-indent: 2em;
+	margin: 2px 0 10px 0;
+}
+
+.note-cont div:first-child p {
+	text-indent: 0;
 }
 
 .button{
