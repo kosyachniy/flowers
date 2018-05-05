@@ -431,7 +431,7 @@ input[type="file"] {border: 0;}
 	/* background-color: #fff; */
 }
 
-.note h1 {
+.note h2 {
 	width: 100%;
 	text-align: center;
 }
@@ -441,13 +441,28 @@ input[type="file"] {border: 0;}
 	margin: 0 0 0 -10px;
 }
 
-.note div:first-of-type {
+.note-img {
 	width: 30%;
 }
 
-.note div:nth-of-type(2) {
-	width: calc(70% - 40px);
-	padding: 0 0 0 20px;
+.note-cont {
+	width: calc(70% - 100px);
+	padding: 0 0 0 50px;
+}
+
+.note-cont div {
+	width: calc(100% - 20px);
+}
+
+.note-cont div:first-child {
+	color: #505050;
+	font-size: 0.95rem;
+	margin: 10px 20px 15px 0;
+}
+
+.note-cont div:last-child {
+	text-align: left;
+	margin: 0 0 0 20px;
 }
 
 .button{
@@ -465,6 +480,13 @@ input[type="file"] {border: 0;}
 
 .button:hover {
 	cursor: pointer;
+}
+
+@media all and (max-width: 550px) {
+	.note-img {width: 100%;}
+	.note-cont {width: calc(100% - 20px); padding: 0;}
+	.note-cont div:first-child {margin: 15px 0 0 10px;}
+	.note-cont div:last-child {text-align: left; margin: 15px 0 0 15px;}
 }
 
 /* .note div:hover, */ .active {
