@@ -1,5 +1,5 @@
 <?php
-$title = 'Заказ цветов';
+$title = 'Оформление заказа';
 include('../sys/head.html');
 ?>
 
@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_array($res)) {
 
 print '</table>
 <h4>Общая сумма заказа: ' . $sum . '₽</h4>
-<form action="buy.php" method="post">
+<form action="/order/index.php" method="post">
 	<input name="name" placeholder="Ваше имя">
 	<input name="surname" placeholder="Ваша фамилия">
 	<input name="tel" placeholder="Номер телефона">
