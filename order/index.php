@@ -31,14 +31,13 @@ $id = mysqli_insert_id($db);
 $text .= '</table>
 <h4>Общая сумма заказа: ' . $sum . '₽</h4>
 '. $surname . ' ' . $name . ' (' . $tel . ')<br>
-Адрес: ' . $geo . ' (c ' . $timestart . ' до ' . $timestop . ')';
+Адрес: ' . $geo . '<br>
+Время: ' . $times . '<br>';
+if ($descr) {
+	$text .= 'Комментарий:<br>' . $descr;
+}
 
 mail($set['mail'], 'Заказ №' . $id, $text, 'Content-type: text/html;\r\n');
-
-//unset($_COOKIE['basket']);
-//setcookie('basket', '', time() - 3600);
-//setcookie('basket', '');
-//$_COOKIE['basket'] = ',';
 
 print '<script>
 deleteCookie("basket");

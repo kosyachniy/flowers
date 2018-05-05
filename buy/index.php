@@ -5,7 +5,8 @@ include('../sys/head.html');
 
 <style>
 	table, form {width: 100%;}
-	input {display: inline-block; width: 90%;}
+	input {display: inline-block;}
+	textarea, input {width: 90%;}
 	td {padding: 5px;}
 </style>
 
