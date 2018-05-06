@@ -21,7 +21,13 @@ while ($row = mysqli_fetch_array($res))
 	<meta name="author" content="Poloz Alexey (polozhev@mail.ru)">
 	<meta name="keywords" content="Заказ цветов">
 	<meta name="description" content="Заказ цветов">
-
+	<style>
+		@media all and (max-width: 480px) {
+			.expand {
+				background: url(/sys/back2.jpg) repeat;
+			}
+		}
+	</style>
 </head>
 <body>
 	<div class="header" onclick="change();" style="background: url(/sys/back2.jpg) repeat;">

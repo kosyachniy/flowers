@@ -18,7 +18,7 @@ $res = mysqli_query($db, "SELECT * FROM `products` WHERE `id`='$id'");
 while ($row = mysqli_fetch_array($res)) {
 	print '<div class="note"><h2>' . $row['name'] . '</h2>';
 
-	print '<div class="note-img"><img src="/load/products/' . $id . '.jpg">';
+	print '<div class="note-img"><img src="/load/products/' . $row['photo'] . '.jpg">';
 
 	if ($_SESSION['admin'] == 1) {
 		print '<br><form action="download.php?i=' . $id . '" method="post" enctype="multipart/form-data">
