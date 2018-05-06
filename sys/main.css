@@ -1,6 +1,8 @@
 @charset "utf-8";
 @font-face {font-family: Myriad; src: url(8143.otf);}
 @font-face {font-family: a_BentTitulDcFr; src: url(a_BentTitulDcFr.ttf);}
+@font-face {font-family: Arcadia; src: url(10681.ttf);}
+@font-face {font-family: Campanella; src: url(11790.ttf);}
 
 html, body {width: 100%;}
 
@@ -8,12 +10,13 @@ body {
 	margin: 0;
 	padding: 55px 0 0 0;
 	font: 19px Myriad; /* Arsenal-Bold Helvetica Arial Calibri Avenir Next Regular */
+	color: #fff;
 }
 
-hr {border: 1px solid #000; width: 100%;}
-a, a:hover, a:active, a:visited {text-decoration: none; color: #000;}
+hr {border: 1px solid #fff; width: 100%;}
+a, a:hover, a:active, a:visited {text-decoration: none; color: #fff;}
 
-table, tr, td {border: 1px solid #000; border-collapse: collapse;}
+table, tr, td {border: 1px solid #fff; border-collapse: collapse;}
 td {vertical-align: top;}
 
 div {
@@ -199,7 +202,7 @@ input[type="file"] {border: 0;}
 }
 
 .header a div:hover, .expand > a:hover {
-	background-color: #fff;
+	background-color: #cdfe29;
 	color: #000;
 }
 
@@ -465,7 +468,7 @@ input[type="file"] {border: 0;}
 }
 
 .note-cont div:first-child {
-	color: #505050;
+	color: #fff; /* #505050 */
 	font-size: 0.85rem;
 	margin: 10px 0 10px 10px;
 	font-style: italic;
@@ -495,7 +498,7 @@ input[type="file"] {border: 0;}
 
 .button:not(.active) {
 	margin: 15px 0 10px 0;
-	border: 1px solid #000;
+	border: 1px solid #fff;
 }
 
 .button:hover {
@@ -513,6 +516,7 @@ input[type="file"] {border: 0;}
 	background-color: #cdfe29;
 	border: 0;
 	margin: 16px 0 11px 1px;
+	color: #000;
 }
 
 @media all and (min-width: 1040px) {
@@ -549,7 +553,7 @@ input[type="file"] {border: 0;}
 
 .info {
 	width: 100vw;
-	color: #505050;
+	color: #fff;
 	font-size: 15px;
 	text-align: center;
 	margin: 10px 0 -10px 0;
@@ -567,12 +571,12 @@ input[type="file"] {border: 0;}
 
 .foot {
 	width: 100%;
-	border-top: 1px solid #505050;
+	border-top: 1px solid #fff;
 	font-size: 15px;
 }
 
 .foot, .foot a {
-	color: #505050;
+	color: #fff;
 }
 
 .foot > tbody > tr > td {
@@ -580,7 +584,7 @@ input[type="file"] {border: 0;}
 }
 
 .foot > tbody > tr > td:first-child {
-	border-right: 1px solid #505050;
+	border-right: 1px solid #fff;
 	width: 70%;
 }
 

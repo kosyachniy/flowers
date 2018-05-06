@@ -20,4 +20,8 @@ function nl2p($string) {
 
 	return $paragraphs;
 }
+
+function mb_strtoupper_first($str, $encoding = 'UTF8') {
+	return mb_strtoupper(mb_substr($str, 0, 1, $encoding), $encoding) . mb_substr($str, 1, mb_strlen($str, $encoding), $encoding);
+}
 ?>

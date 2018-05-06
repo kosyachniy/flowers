@@ -14,7 +14,7 @@ include('../sys/head.html');
 <h2>Заказ</h2>
 
 <table>
-	<tr style="background-color: #cdfe29;">
+	<tr style="background-color: #cdfe29; color: #000;">
 		<td>
 			Наименование
 		</td>

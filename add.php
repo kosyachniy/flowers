@@ -9,8 +9,10 @@ if ($_SESSION['admin'] == 1) {
 	$descr = $_POST['descr'];
 	$cont = $_POST['cont'];
 	$price = $_POST['price'];
+	$priority = $_POST['priority'];
+	$category = strtolower($_POST['category']);
 
-	mysqli_query($db, "INSERT INTO `products`(`name`, `descr`, `cont`, `price`) VALUES ('$name', '$descr', '$cont', '$price');");
+	mysqli_query($db, "INSERT INTO `products`(`name`, `descr`, `cont`, `price`, `priority`, `category`) VALUES ('$name', '$descr', '$cont', '$price', '$priority', '$category');");
 	$id = mysqli_insert_id($db);
 
 	copy('load/products/0.jpg', 'load/products/' . $id . '.jpg');
