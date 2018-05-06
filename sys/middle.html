@@ -3,8 +3,16 @@
 	<div class="back" style="background: none; position: relative; top: -70px;">
 		<table>
 			<tr>
-				<td style="font-size: 1.2rem;"><?=$row['name']?></td>
-				<td style="color: #cdfe29;"><?=$row['price']?>₽</td>
+				<td style="font-size: 1.2rem;"><div><?=$row['name']?></div></td>
+				<td style="color: #cdfe29;"><?php
+
+if ($_SESSION['admin'] == 1) {
+	print '<a href="/delete.php?i=' . $row['id'] . '" style="color: red; font-size: 1.2rem; font-weight: bold;">Удалить</a>';
+} else {
+	print $row['price']. '₽';
+}
+
+											?></td>
 			</tr>
 		</table>
 	</div>

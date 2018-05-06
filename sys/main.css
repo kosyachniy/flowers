@@ -384,6 +384,12 @@ input[type="file"] {border: 0;}
 	width: 90%;
 	font-size: 1.5rem;
 	color: #fff;
+	/* vertical-align: middle; */
+}
+
+.notes2 td div {
+	text-overflow: ellipsis;
+	max-height: 46px;
 }
 
 .notes2 td:last-child {
@@ -509,7 +515,7 @@ input[type="file"] {border: 0;}
 	margin: 16px 0 11px 1px;
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1040px) {
 	/* body {
 		background-color: #edeef0;
 	} */
@@ -587,9 +593,19 @@ input[type="file"] {border: 0;}
 	padding: 1px 11px 1px 0;
 }
 
+.foot table td:last-child {
+	min-width: 200px;
+}
+
 tr.leap {display: none;}
 
 @media all and (max-width: 500px) {
 	div.leap {display: none;}
 	tr.leap {display: table-row;}
+}
+
+@media all and (max-width: 515px) {
+	.foot > tbody > tr > td {
+		padding: 10px;
+	}
 }

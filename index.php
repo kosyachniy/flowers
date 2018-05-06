@@ -7,7 +7,7 @@ include('sys/head.html');
 
 <style>
 	form {width: 100%;}
-	input {display: inline-block; width: 90%;}
+	input, textarea {display: inline-block; width: 90%;}
 
 	.mail {width: 40%;}
 	.geo {width: 50%;}
@@ -31,6 +31,14 @@ if ($_SESSION['admin'] == 1) {
 	<input name="insta" placeholder="Ссылка на инстаграмм" value="' . $set['insta'] . '">
 	<input type="submit" value="Сохранить" style="width: 93%;"><br><br>
 	<a href="out.php" style="color: red; font-size: 1.8rem; text-decoration: underline;">Выйти из режима администратора</a><br>
+</form><br><br>
+<h4>Добавить товар</h4>
+<form action="add.php" method="post">
+	<input name="name" placeholder="Название" required>
+	<textarea name="descr" placeholder="Короткое описание"></textarea>
+	<textarea name="cont" placeholder="Полное описание"></textarea>
+	<input name="price" placeholder="Цена" required>
+	<input type="submit" value="Добавить" style="width: 93%;">
 </form>
 </div>'; 
 }
