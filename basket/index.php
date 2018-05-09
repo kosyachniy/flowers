@@ -11,6 +11,33 @@ include('../sys/head.html');
 
 <div class="notes2">
 
+
+<div id="sp-message-area" class="span6" style="width: 100%;"><section id="sp-component-area-wrapper" class=" "><div class="row-fluid" id="component-area">
+<div id="sp-component-area" class="span12"><section id="sp-component-wrapper"><div id="sp-component"><div id="system-message-container">
+	</div>
+
+
+<section class="featured ">
+
+		
+				
+		<section class="items-leading">
+							<div class="leading-1">
+					
+<article class="post-4 post hentry status-publish category-uncategorised">
+
+			
+	
+		
+		
+	<section class="entry-content">  
+
+								
+		
+				
+		<p>		</p><div class="moduletable">
+	<div class="label_products list_product">
+
 <?php
 $basket = explode('-', $_COOKIE['basket']);
 $empty = true;
@@ -24,6 +51,39 @@ while ($row = mysqli_fetch_array($res)) {
 		$sum += $row['price'];
 	}
 }
+?>
+
+
+</div>		</div>
+	<p></p>		
+    </section>
+	
+	<footer class="entry-meta">
+	
+				
+			
+				    
+				
+    </footer>	
+	
+</article>				</div>
+				<div class="clearfix"></div>
+									</section>
+		
+		<div class="clearfix"></div>
+		
+	
+				
+		
+		
+		
+		</section></div></section></div>
+</div></section></div>
+
+
+
+<?php
+
 
 print '</div>';
 

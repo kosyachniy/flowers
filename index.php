@@ -52,7 +52,7 @@ if ($_SESSION['admin'] == 1) {
 
     $res2 = mysqli_query($db, "SELECT * FROM `categories` ORDER BY `priority` DESC");
     while ($row = mysqli_fetch_array($res2)) {
-        print ' <option selected value="'. $row['id'] . '">' . $row['name'] . '</option>';
+        print ' <option value="'. $row['id'] . '">' . $row['name'] . '</option>';
     }
 
 print '</select>

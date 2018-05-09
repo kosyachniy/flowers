@@ -3,6 +3,8 @@ $title = 'Заказ цветов';
 include('../sys/head.html');
 session_start();
 
+print '<style> .note div {color: #000; display: inline-block; vertical-align: top;}</style>';
+
 if ($_SESSION['admin'] == 1) {
 	print '
 <style>
@@ -13,22 +15,7 @@ if ($_SESSION['admin'] == 1) {
 }
 
 $id = $_GET['i'];
-$cat = $_GET['c'];
 
-if ($cat) {
-	print '<script>
-	place(\'.notes2\', 3, 85, 20);
-</script>
-
-<div class="notes2">';
-
-	$res2 = mysqli_query($db, "SELECT * FROM `products` WHERE `category` = '$cat' ORDER BY `priority` DESC");
-	while ($row = mysqli_fetch_array($res2)) {
-		include('../sys/middle.html');
-	}
-
-	print '</div>';
-} else {
 	$res = mysqli_query($db, "SELECT * FROM `products` WHERE `id`='$id'");
 	while ($row = mysqli_fetch_array($res)) {
 		print '<div class="note"><h2>' . $row['name'] . '</h2>';
@@ -40,6 +27,7 @@ if ($cat) {
 	<input type="file" name="name" style="width: 90%; font-size: 0.9rem;">
 	<input type="submit" value="Загрузить" style="width: 90%;">
 </form>';
+	
 	}
 
 		print '</div><div class="note-cont">';
@@ -47,16 +35,28 @@ if ($cat) {
 		if ($_SESSION['admin'] == 1) {
 			print '<form action="edit.php?i=' . $id . '" method="post">
 		<input name="name" placeholder="Название" value="' . $row['name'] . '"><br>
-		<input name="category" placeholder="Категория" value="' . $row['category'] . '"><br>
+    <select name="category" required>
+    <option disabled>Выберите категорию</option>';
+
+    $res2 = mysqli_query($db, "SELECT * FROM `categories` ORDER BY `priority` DESC");
+    while ($row2 = mysqli_fetch_array($res2)) {
+        print ' <option value="'. $row2['id'] . '"';
+        if ($row2['id'] == $row['category']) {
+			print ' selected';
+		}
+		print '>' . $row2['name'] . '</option>';
+    }
+
+print '</select><br>
 		<textarea name="descr" placeholder="Короткое описание">' . $row['descr'] . '</textarea><br>
 		<textarea name="cont" placeholder="Полное описание">' . $row['cont'] . '</textarea><br>';
 		} else {
-			print '<div>' . nl2p($row['descr']) . '</div><div>' . nl2p($row['cont']) . '</div>';
+			print '<div style="color: #000;">' . nl2p($row['descr']) . '</div><div>' . nl2p($row['cont']) . '</div>';
 		}
 
 		if ($_SESSION['admin'] == 1) {
 			print '<input name="price" style="width: 100px;" value="' . $row['price'] . '">₽<br>
-		Приоритет: <input name="priority" placeholder="Цена" value="' . $row['priority'] . '" style="width: 100px;">
+		Приоритет: <input name="priority" value="' . $row['priority'] . '" style="width: 100px;">
 		<input type="submit" value="Сохранить" style="width: 90%;"></form>';
 		}
 
@@ -79,7 +79,6 @@ if (getCookie('basket').split('-').indexOf(x.toString()) != -1) {
 
 		print '</div>';
 	}
-}
 
 include('../sys/foot.html');
 ?>
