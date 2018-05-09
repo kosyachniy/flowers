@@ -1,0 +1,100 @@
+/** ! v2.1
+ * @package Joomla
+ * @author ELLE
+ * @website http://joomext.ru/
+ * @email support@joomext.ru
+ * @copyright Copyright by ELLE. All rights reserved.
+ * @license Proprietary. Copyrighted Commercial Software
+ **/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 800px) {
+  .ExtQv{ display: none;} }
+.AjaxPreloader {position:fixed;top:49%;left:49%;background-color:#fff; z-index:99;opacity: 0.7;}
+#quick-view{position:absolute;top:60px;left:50%;margin-left:-420px;z-index:6666;padding:20px 20px 30px;width:800px;background:#fff;border-radius: 10px;box-shadow: 0px 3px 15px #000;}
+#quick_view_overlay{z-index:5555;display:none;position:fixed;left:0;top:0;opacity:0.9;width:100%;height:100%;background:#333}
+#quick_view_close {text-align: right;margin-bottom: -15px;font-size: 10px;cursor: pointer;}
+#quick_view_close span {background: #999;color: #fff;padding: 2px 5px;border-radius: 20px;font-family: Verdana;}
+#quick-view .quick_image{float:left;max-width:380px;width:50%}
+#quick-view .image_middle {height:450px;}
+#quick-view .quick_right{float:right;width: 50%;}
+#quick-view #list_product_image_thumb img{max-height: 115px;margin:0;border:0;}
+#quick-view #list_product_image_middle img{max-width: 365px;max-height: 440px;border:1px solid #e1e1e1 !important;}
+#quick-view div.jshop_img_description{padding:0;margin-top: 10px;}
+#quick-view .product_label img{border:0;position:absolute;z-index:10}
+#quick-view .prod_price {overflow: hidden;margin-bottom: 10px;}
+#quick-view .jshop_prod_attributes{float:left;}
+#quick-view .jshop_prod_attributes img{height:100%;border:0}
+#quick-view .attributes{vertical-align:baseline}
+#quick-view small{color:#999;font-size:11px}
+#quick-view h1{font:22px/30px Arial,Tahoma,Verdana,sans-serif;color:#393939}
+#quick-view quick_prod_description{font-size:13px;line-height:16px;color:#666}
+#quick-view .quick_readmore {text-align:right;font-size: 11px;}
+#quick-view .quick_prod_prices .old_price{text-decoration:line-through;color:#999;font-size:14px}
+#quick-view #block_price{font-size:22px;font-weight:700;color:#ff6922}
+#quick-view .quick_button_cart, #quick-view .quick_button_wishlist, #quick-view .buttons-quick a{display:block;border:0;-moz-border-radius:3px;-khtml-border-radius:3px;border-radius:3px;width:200px;height:33px;padding:0;margin:5px 0;text-align:center;text-decoration:none;font:bold 14px/33px 'arial',sans-serif;text-transform:uppercase;color:#fff;cursor:pointer;background:#ffae00;background:-moz-linear-gradient(#ffae00,#ff9400 40%,#ff8204 60%,#ff710a);background:-webkit-gradient(linear,0 0,0 100%,color-stop(#ffae00),color-stop(40%,#ff9400),color-stop(60%,#ff8204),color-stop(#ff710a));background:-webkit-linear-gradient(#ffae00,#ff9400 40%,#ff8204 60%,#ff710a);background:-o-linear-gradient(#ffae00,#ff9400 40%,#ff8204 60%,#ff710a);background:linear-gradient(#ffae00,#ff9400 40%,#ff8204 60%,#ff710a);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffae00', endColorstr='#ff710a')}
+#quick-view .quick_button_wishlist{border-radius:3px;background:#f0f0f0;filter:none;color:#666}
+#quick-view .quick_button_cart:hover{background:#ff710a;}
+#quick-view .quick_button_wishlist:hover{background:#B1B1B1;}
+#quick-view .quick_button_addcart {background:#26bf30 !important;}
+#quick-view .quick_button_addwish {background:#ffd952 !important;}
+#quick-view label.attributes_title{display:block !important;font-weight:700;margin:0;padding:0;text-align:left;float:none;}
+#quick-view .jshop_prod_attributes label {float:none;display:inline}
+#quick-view .free_attribs_item, #quick-view .prod_free_attribs{ overflow: hidden;clear: both;padding: 10px 0; }
+#quick-view .free_attribs_item .name { float: left;margin-right: 10px;}
+#quick-view .free_attribs_item .field { float: left;} 
+#quick-view .prod_buttons{width:200px;clear:both}
+.ExtQv{cursor:pointer;visibility:hidden;position:absolute;bottom:60%;z-index:1;border:0;width:100%;right:0;font:11px/23px 'arial','helvetica',sans-serif;background:rgba(121, 32, 190, 0.71);color:#fff;cursor:pointer;opacity:.7;filter: alpha(opacity=70);text-align:center;padding:5px 0 5px}
+.product:hover .ExtQv{visibility:visible}
+.list_product .product, .list_related .product{position:relative}
+.msg_incart {margin-top: -20px;height:20px;display: block;font-size: 12px;color: rgb(255, 153, 0);font-weight: bold;font-style: italic;}
+.prod_qty {float: left;margin-top: 5px;}
+.prod_qty_input  input{width:24px}
+.buttons-quick{clear:both}
+.quick_prod_description, .quick_extra_fields {font-size: 12px;line-height: 16px;}
+.quick_extra_fields_name {font-weight: 700;}
+.quick_extra_fields { margin-top: 15px;}
+ul#jcarousel {width:1000px !important}
+#QvPrev{background: url('graphics/arrows.png') no-repeat 0 0;height: 50px;width: 30px;position: absolute;left: -60px;top: 50%;cursor:pointer;z-index:9990;}
+#QvNext{background: url('graphics/arrows.png') no-repeat -42px 0;height: 50px;width: 30px;position: absolute;right: -60px;top: 50%;display: block;cursor:pointer;z-index:9990;}
+#QvUrl{position:absolute;bottom: 10px;right:5px;}
+#QvUrl a{color: #484847;font-size: 12px;line-height: 14px;font-weight: bold;text-transform: uppercase;cursor: pointer;text-decoration:none;background-color: #ebebe8;background-image: -moz-linear-gradient(top, #f8f8f5, #e0e0dd);background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8f8f5), to(#e0e0dd));background-image: -webkit-linear-gradient(top, #f8f8f5, #e0e0dd);background-image: -o-linear-gradient(top, #f8f8f5, #e0e0dd);background-image: linear-gradient(to bottom, #f8f8f5, #e0e0dd);background-repeat: repeat-x;border: 1px solid #ddd;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f5', endColorstr='#e0e0dd', GradientType=0);filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);padding: 5px 15px;border-radius: 4px;height: 30px;}
+#QvUrl a:hover{background: #ddd;}
+.QvForm-button{width:200px;}
+.QvForm-button a{display: block;border: 0;-moz-border-radius: 3px;-khtml-border-radius: 3px;border-radius: 3px;width: 200px;height: 33px;padding: 0;margin: 5px 0;text-align: center;text-decoration: none;font: bold 12px/33px 'arial',sans-serif;text-transform: uppercase;color: #fff !important;cursor: pointer;background: #72D0EE;background: -moz-linear-gradient(#72D0EE,#1EACDA 40%,#319DC0 60%,#2D8EAD);background: -webkit-gradient(linear,0 0,0 100%,color-stop(#72D0EE),color-stop(40%,#1EACDA),color-stop(60%,#319DC0),color-stop(#2D8EAD));background: -webkit-linear-gradient(#72D0EE,#1EACDA 40%,#319DC0 60%,#2D8EAD);background: -o-linear-gradient(#72D0EE,#1EACDA 40%,#319DC0 60%,#2D8EAD);background: linear-gradient(#72D0EE,#1EACDA 40%,#319DC0 60%,#2D8EAD);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72D0EE', endColorstr='#2D8EAD');}
+.QvForm-button a:hover{background:#1F7794;}
+
+/* for style radio attr
+#quick-view .jshop_prod_attributes label  {float: left;margin-right: 7px;text-align: center;border: 1px solid #666;border-radius: 2px;}
+#quick-view .jshop_prod_attributes input[type=radio]  {display:none;}
+#quick-view .jshop_prod_attributes input[type=radio] + label  {background:#fff;}
+#quick-view .jshop_prod_attributes .checha input[type=radio] + label  {color:#fff;}
+#quick-view .jshop_prod_attributes input[type=radio]:checked + label  {background:#ff710a;color:#fff;border-color:#ff710a}
+#quick-view .jshop_prod_attributes input[type=radio]:checked + label img {background:#ff710a;color:#fff;border:1px solid #ff710a !important}
+#quick-view .jshop.attributes {clear: both;overflow: hidden;}
+#quick-view .jshop_prod_attributes {padding-bottom:0 !important}
+#quick-view .input_type_radio label {font-size:0;border:0;background:0}
+#quick-view .input_type_radio.checha .radio_attr_label img {background:#ff710a;border-color:#ff710a !important;}
+#quick-view .radio_attr_label img {padding:2px;border:1px solid #666 !important;border-radius: 2px;}
+#quick-view .input_type_radio { margin-right: 0 !important;}
+#quick-view .jshop_prod_attributes label.attributes_title {border:0;margin-bottom:5px !important}
+#quick-view .jshop.attributes>div { margin-bottom:10px;}
+  */
+
+/* QvForm */
+#window{background-color:#000;display:none;height:100%;left:0;position:fixed;top:0;width:100%;z-index:9991}
+#QvForm,.statusMessage{background:none repeat scroll 0 0 #FFF;border:3px solid #FFF;color:#666;z-index:9999;font-size:12px}
+#QvForm{border-radius:10px 10px 10px 10px;height:320px;width:331px;z-index:9999;margin:0 auto;padding:1.5em}
+#QvForm.positioned{background-color:#FFF;bottom:0;left:0;margin-bottom:auto;margin-top:auto;position:absolute;right:0;top:0}
+.statusMessage{bottom:0;display:none;height:2em;left:0;position:fixed;right:0;top:0;width:30em;margin:auto;padding:1.5em}
+.statusMessage p{text-align:center;margin:0;padding:0}
+#QvForm p input, #QvForm textarea{width:180px;margin:0;padding: 3px;}
+#QvForm .qv-mes {margin:20px 0;}
+#QvForm hr {color:#ccc;background-color:#ccc;height:1px;border-style:initial;margin-bottom:20px;}
+#QvForm label{clear:left;display:block;float:left;text-align:right;width:28%;margin:.15em .5em 0 0;padding:.1em 0 0}
+#form_header{color:#333;font-size:24px;margin-bottom:30px;border-bottom: 1px solid #ccc;padding-bottom: 10px;  }
+.form_callMe{font-weight:700}
+#formButtons {text-align:center}
+#sendMessage {background:#ff710a;height:32px;border-radius:5px;color:#fff;font-size:16px;line-height: 16px;border:0;text-transform:uppercase;padding:0 20px;margin-top:20px;cursor:pointer;}
+#qvform-close {position: absolute;right: 7px;top: 2px;color: red;font-size: 14px;font-family: Verdana, sans-serif;font-weight: bold;cursor: pointer;}
+#QvForm .qv-attrbuf {display: none;}

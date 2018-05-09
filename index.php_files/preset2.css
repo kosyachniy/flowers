@@ -1,0 +1,164 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a:not(.btn) {
+  color: #8b318d;
+}
+a:not(.btn):hover {
+  color: #c55dc7;
+}
+body {
+  color: #444444;
+}
+body.bg {
+  background: #ffffff;
+}
+#sp-header-wrapper {
+  background-color: #ffffff;
+  background-image: -moz-linear-gradient(top,#ffffff,#fff);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#fff));
+  background-image: -webkit-linear-gradient(top,#ffffff,#fff);
+  background-image: -o-linear-gradient(top,#ffffff,#fff);
+  background-image: linear-gradient(to bottom,#ffffff,#fff);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=0);
+}
+#sp-header-wrapper .logo {
+  background-image: url(../../images/presets/preset2/logo.png);
+}
+#sp-feature-wrapper {
+  background-color: #ae4bb0;
+  background-image: -moz-linear-gradient(top,#c55dc7,#8b318d);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#c55dc7),to(#8b318d));
+  background-image: -webkit-linear-gradient(top,#c55dc7,#8b318d);
+  background-image: -o-linear-gradient(top,#c55dc7,#8b318d);
+  background-image: linear-gradient(to bottom,#c55dc7,#8b318d);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc55dc7', endColorstr='#ff8b308d', GradientType=0);
+}
+#sp-feature-wrapper a:not(.btn) {
+  color: #e0a9e1;
+}
+#sp-feature-wrapper a:not(.btn):hover {
+  color: #fbf5fb;
+}
+.module.highlighted {
+  background: #3498DB;
+}
+.module.highlighted a {
+  color: #fff !important;
+}
+#sp-bottom-wrapper,
+#sp-footer-wrapper {
+  background: #662467;
+  color: #fff;
+}
+#sp-bottom-wrapper h3,
+#sp-footer-wrapper h3 {
+  color: #fff;
+}
+#sp-bottom-wrapper a:not(.btn),
+#sp-footer-wrapper a:not(.btn) {
+  color: #d383d4;
+}
+#sp-bottom-wrapper a:not(.btn):hover,
+#sp-footer-wrapper a:not(.btn):hover {
+  color: #eecfee;
+}
+#sp-footer-wrapper {
+  border-top: 1px solid #411741;
+}
+#sp-footer-wrapper::after {
+  background: #802d82;
+}
+.sp-border {
+  border-top: 1px solid #411741;
+}
+.sp-border::after {
+  background: #802d82;
+}
+.btn-primary,
+button,
+input[type='submit'],
+input[type='button'],
+submit {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  background-color: #c75da9;
+  background-image: -moz-linear-gradient(top,#c75db7,#c75d94);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#c75db7),to(#c75d94));
+  background-image: -webkit-linear-gradient(top,#c75db7,#c75d94);
+  background-image: -o-linear-gradient(top,#c75db7,#c75d94);
+  background-image: linear-gradient(to bottom,#c75db7,#c75d94);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc65db7', endColorstr='#ffc65d93', GradientType=0);
+  border-color: #c75d94 #c75d94 #a0376e;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+  *background-color: #c75d94;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled],
+button:hover,
+button:active,
+button.active,
+button.disabled,
+button[disabled],
+input[type='submit']:hover,
+input[type='submit']:active,
+input[type='submit'].active,
+input[type='submit'].disabled,
+input[type='submit'][disabled],
+input[type='button']:hover,
+input[type='button']:active,
+input[type='button'].active,
+input[type='button'].disabled,
+input[type='button'][disabled],
+submit:hover,
+submit:active,
+submit.active,
+submit.disabled,
+submit[disabled] {
+  color: #fff;
+  background-color: #c75d94;
+  *background-color: #c04a87;
+}
+.btn-primary:active,
+.btn-primary.active,
+button:active,
+button.active,
+input[type='submit']:active,
+input[type='submit'].active,
+input[type='button']:active,
+input[type='button'].active,
+submit:active,
+submit.active {
+  background-color: #b33e7b \9;
+}

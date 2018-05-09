@@ -1,0 +1,7 @@
+/*
+ * Copyright © 2014 NoNumber All Rights Reserved
+ * License http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+(function($){$(document).ready(function(){$.each($('.'+modal_class),function(i,el){var $el=$(el);var p=$.extend({},modal_defaults);$.each(el.attributes,function(index,attr){if(attr.name.indexOf("data-modal-")===0){k=$.camelCase(attr.name.substring(11));p[k]=attr.value;}});if(p['innerWidth']!=undefined){delete p['width'];}
+if(p['innerHeight']!=undefined){delete p['height'];}for(k in p){if(p[k]=='true'){p[k]=true;}else if(p[k]=='false'){p[k]=false;}else if(!isNaN(p[k])){p[k]=parseFloat(p[k]);}}
+p['onComplete']=function(){modalsResize()};$el.colorbox(p);});});modalsResize=function(){$.each($('#colorbox'),function(i,el){$el=$(el);$title=$('#cboxTitle');$content=$('#cboxLoadedContent');$th=$title.outerHeight()+1;$m=parseInt($content.css('marginTop'));if($th>$m){$h=parseInt($content.css('height'))-($th-$m);$div=$th-$m;$content.css('marginTop',$th);if(parseInt($el.css('top'))<23){$content.css('height',parseInt($content.css('height'))-$div);}else{$el.css('height',parseInt($el.css('height'))+$div);$el.css('top',parseInt($el.css('top'))-($div/2));$('#cboxWrapper').css('height',parseInt($('#cboxWrapper').css('height'))+$div);$('#cboxContent').css('height',parseInt($('#cboxContent').css('height'))+$div);$('#cboxMiddleLeft').css('height',parseInt($('#cboxMiddleLeft').css('height'))+$div);$('#cboxMiddleRight').css('height',parseInt($('#cboxMiddleRight').css('height'))+$div);}}});};})(jQuery);
