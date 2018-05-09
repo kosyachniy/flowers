@@ -425,21 +425,3 @@ tr.leap {display: none;}
 		padding: 10px;
 	}
 }
-
-
-/**/
-
-.shir, .shir2 {
-	display: inline-block;
-}
-
-.shir {
-	margin-right: 1.5rem;
-}
-
-@media all and (max-width: 412px) {
-	.shir {
-		width: 90%;
-		margin: 0 0 10px 0;
-	}
-}

@@ -122,8 +122,39 @@ var QvSite = 'http://tychinka52.ru/';
 
 	<center>
 
-<a href="/"><img src="/sys/logo.png" style="height: 150px;"></a><br>
-<div style="font-size: 20px; margin: 10px;">
+<style>
+	.logogo {height: 150px;}
+
+	.shir, .shir2 {
+		display: inline-block;
+		font-size: 20px;
+	}
+
+	.shir {
+		margin-right: 1.5rem;
+	}
+
+	@media all and (max-width: 412px) {
+		.shir {
+			width: 90%;
+			margin: 0 0 10px 0;
+		}
+	}
+
+	@media all and (max-width: 470px) {
+		.logogo {
+			width: 100%;
+			height: auto;
+		}
+
+		.shir, .shir2 {
+			font-size: 17px;
+		}
+	}
+</style>
+
+<a href="/"><img src="/sys/logo.png" class="logogo"></a><br>
+<div style="margin: 10px;">
 	<div class="shir"><a href="tel:<?=$set['tel']?>"><?=$set['tel']?></a></div><div class="shir2"><?=$set['geo']?></div>
 </div>
 </center>

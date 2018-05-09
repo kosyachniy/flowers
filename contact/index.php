@@ -20,6 +20,14 @@ include('../sys/head.html');
     </tr>
     <tr>
         <td>
+            Почта
+        </td>
+        <td>
+            <a href="mailto:<?=$set['mail']?>"><?=$set['mail']?></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
             Адрес
         </td>
         <td>
