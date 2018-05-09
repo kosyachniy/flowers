@@ -8,39 +8,6 @@ while ($row = mysqli_fetch_array($res))
 	$set[$row['name']] = $row['cont'];
 
 ?>
-<!--
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<style>
-		@media all and (max-width: 480px) {
-			.expand {
-				background: url(/sys/back2.jpg) repeat;
-			}
-		}
-	</style>
-</head>
-<body style="background: url(/sys/back2.jpg) repeat;">
-	<div class="header" onclick="change();" style="background: url(/sys/back2.jpg) repeat;">
-		<img src="/sys/logo.png" >
-		<a href="/"><div>Каталог</div></a>
-		<a href="/basket"><div>Корзина</div></a>
-
-	</div>
-
-	<div class="expand" id="menu">
-		<form action="/search" method="get">
-			<input placeholder="Поиск" name="i" required>
-		</form>
-		<div><?=$set['geo']?></div>
-		<div><a href="tel:<?=$set['tel']?>"><?=$set['tel']?></a></div>
-		<a href="/" style="margin: 130px 0 0 0;">Каталог</a>
-		<a href="/basket">Корзина</a>
-	</div>
-
-
-!-->
-
 
 	<!DOCTYPE html>
 <html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths mdl-js" lang="ru-ru" style=""><!--<![endif]--><head>
@@ -152,36 +119,21 @@ var QvSite = 'http://tychinka52.ru/';
         <div class="chromeframe alert alert-danger" style="text-align:center">You are using an <strong>outdated</strong> browser. Please <a target="_blank" href="http://browsehappy.com/">upgrade your browser</a> or <a target="_blank" href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</div>
         <![endif]-->
         <header id="sp-header-wrapper" class=" "><div class="container"><div class="row-fluid" id="header">
-<div id="sp-logo" class="span4">
 
-<div class="custom">
-	<p style="text-align: center;"><a title="Магазин цветов в Нижнем Новгороде" href="http://tychinka52.ru/"><img src="./index.php_files/logo.PNG" alt=""></a></p>
-<p style="font-size: 23px; color: #8b318d; transition: all 1s; text-align:center; line-height:1.1em;"><strong>Бесплатная доставка цветов</strong></p>
-<p style="font-size: 20px; text-align: center; color: #8b318d; transition: all 1s;"><strong>По Нижнему Новгороду</strong></p></div>
+	<center>
+<img src="/sys/logo.png" style="height: 150px;"><br>
+<div style="font-size: 20px; margin: 10px;">
+	<a href="tel:<?=$set['tel']?>"><?=$set['tel']?></a> &nbsp; &nbsp; <?=$set['geo']?>
 </div>
+</center>
 
-<div id="sp-garant" class="span4 visible-desktop">
-
-<div class="custom">
-	<p><img style="display: block; margin-left: auto; margin-right: auto;" src="./index.php_files/thebes1t.png" alt=""></p></div>
-</div>
-
-<div id="sp-position-0" class="span4 left6">
-
-<div class="custom">
-	<div class="phoneheader"><p style="font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; padding-top: 10%; font-variant: normal; letter-spacing: normal; line-height: 15.808px; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; color: #005602; font-weight: bold; padding-bottom: 10px; text-align: center;">Проблемы с выбором?</p>
-<p style="font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 39px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 15.808px; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; color: #005602; font-weight: bold; text-align: center;"><img src="./index.php_files/phone2.png" alt="" width="36" height="36">410-14-94</p>
-<p style="font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 15.808px; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; color: #005602; font-weight: bold; text-align: center;">режим работы: 9:00 -&nbsp;20:00</p>
-<p style="font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 15.808px; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; color: #005602; font-weight: bold; text-align: center;">доставка круглосуточно</p>
-  <br>
-  <br></div>
-</div></div></div></div></header><section id="sp-feature-wrapper" class=" "><div class="container"><div class="row-fluid" id="feature">
+</div></div></header><section id="sp-feature-wrapper" class=" "><div class="container"><div class="row-fluid" id="feature">
 <div id="sp-menu" class="span12">	
 
 
 			<div id="sp-main-menu" class="visible-desktop">
 				<ul class="sp-menu level-0">
-					<li class="menu-item active first"><a href="/" class="menu-item active first"><span class="menu"><span class="menu-title">Каталог</span></span></a></li>
+					<li class="menu-item"><a href="/" class="menu-item"><span class="menu">Каталог</span></span></a></li>
 					<li class="menu-item"><a href="basket/" class="menu-item"><span class="menu"><span class="menu-title">Корзина</span></span></a></li>
 					<li class="menu-item"><a href="contact/" class="menu-item"><span class="menu"><span class="menu-title">Контакты</span></span></a></li></ul>        
 			</div>  				
