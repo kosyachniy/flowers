@@ -8,19 +8,11 @@ while ($row = mysqli_fetch_array($res))
 	$set[$row['name']] = $row['cont'];
 
 ?>
-<!Doctype html>
-<html>
-<head>
+<!--
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<link rel="stylesheet" type="text/css" href="/sys/main.css">
 	<script src="/sys/main.js"></script>
-	<title><?=$title?> - <?=$set['name']?></title>
-	<link rel ="shortcut icon" type="images/png" href="/sys/favicon.png">
-	<meta name="author" content="Poloz Alexey (polozhev@mail.ru)">
-	<meta name="keywords" content="Заказ цветов">
-	<meta name="description" content="Заказ цветов">
 	<style>
 		@media all and (max-width: 480px) {
 			.expand {
@@ -31,8 +23,7 @@ while ($row = mysqli_fetch_array($res))
 </head>
 <body style="background: url(/sys/back2.jpg) repeat;">
 	<div class="header" onclick="change();" style="background: url(/sys/back2.jpg) repeat;">
-		<div style="font: 23px 'a_BentTitulDcFr', arial; margin: 16px 1.7vw 0 1.7vw;"><?=$set['name']?></div>
-		<!--<img src="/sys/logo.png" >!-->
+		<img src="/sys/logo.png" >
 		<a href="/"><div>Каталог</div></a>
 		<a href="/basket"><div>Корзина</div></a>
 
@@ -47,3 +38,233 @@ while ($row = mysqli_fetch_array($res))
 		<a href="/" style="margin: 130px 0 0 0;">Каталог</a>
 		<a href="/basket">Корзина</a>
 	</div>
+
+
+!-->
+
+
+	<!DOCTYPE html>
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths mdl-js" lang="ru-ru" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+       <base href=".">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><?=$title?> - <?=$set['name']?></title>
+	<link rel ="shortcut icon" type="images/png" href="/sys/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/sys/main.css">
+	<meta name="keywords" content="Заказ цветов">
+	<meta name="description" content="Заказ цветов">
+	<link href="./index.php_files/default_bs.css" rel="stylesheet" type="text/css">
+	<link href="./index.php_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="./index.php_files/bootstrap.min(1).css" rel="stylesheet" type="text/css">
+	<link href="./index.php_files/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+	<link href="./index.php_files/font-awesome.css" rel="stylesheet" type="text/css">
+	<link href="./index.php_files/mobile-menu.css" rel="stylesheet" type="text/css">
+	<link href="./index.php_files/template.css" rel="stylesheet" type="text/css">
+	<link href="./index.php_files/preset2.css" rel="stylesheet" type="text/css">
+	<link href="./index.php_files/style.css" rel="stylesheet" type="text/css">
+	<link href="./index.php_files/quick.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+.container{max-width:1170px}
+#sp-header-wrapper{padding: 20px 0 !important; }
+
+#sp-feature-wrapper{background: rgba(236, 236, 236, 0) !important; padding: 0px 0 !important; }
+
+#sp-feature-wrapper a{color: rgb(41, 169, 113) !important; }
+
+#sp-users-wrapper{background: rgb(255, 255, 255) !important; padding: 30px 0 !important; }
+
+#sp-main-body-wrapper{background: rgb(255, 255, 255) !important; padding: 30px 0 !important; }
+
+#sp-header-wrapper{padding: 20px 0 !important; }
+
+#sp-feature-wrapper{background: rgba(236, 236, 236, 0) !important; padding: 0px 0 !important; }
+
+#sp-feature-wrapper a{color: rgb(41, 169, 113) !important; }
+
+#sp-users-wrapper{background: rgb(255, 255, 255) !important; padding: 30px 0 !important; }
+
+#sp-main-body-wrapper{background: rgb(255, 255, 255) !important; padding: 30px 0 !important; }
+
+#sp-footer-wrapper{background: rgb(255, 255, 255) !important; color: rgba(0, 0, 0, 0.56) !important; padding: 30px 0 !important; }
+
+	</style>
+	<script type="text/javascript" async="" src="./index.php_files/watch.js"></script><script type="text/javascript" async="" src="./index.php_files/widget.js"></script><script type="text/javascript" async="" src="./index.php_files/widget(1).js"></script><script src="./index.php_files/jquery.min.js" type="text/javascript"></script>
+	<script src="./index.php_files/jquery-noconflict.js" type="text/javascript"></script>
+	<script src="./index.php_files/jquery-migrate.min.js" type="text/javascript"></script>
+	<script src="./index.php_files/jquery.colorbox-min.js" type="text/javascript"></script>
+	<script src="./index.php_files/script.min.js" type="text/javascript"></script>
+	<script src="./index.php_files/jquery-noconflict(1).js" type="text/javascript"></script>
+	<script src="./index.php_files/bootstrap.min.js" type="text/javascript"></script>
+	<script src="./index.php_files/modernizr-2.6.2.min.js" type="text/javascript"></script>
+	<script src="./index.php_files/helix.core.js" type="text/javascript"></script>
+	<script src="./index.php_files/menu.js" type="text/javascript"></script>
+	<script src="./index.php_files/jquery.livequery.min.js" type="text/javascript"></script>
+	<script src="./index.php_files/quickLive.js" type="text/javascript"></script>
+	<script type="text/javascript">
+var modal_class = 'modal_link'; var modal_defaults = { opacity: '0.8',maxWidth: '400',maxHeight: '330',current: '{current} / {total}',previous: 'previous',next: 'next',close: 'close',xhrError: 'This content failed to load.',imgError: 'This image failed to load.' };
+spnoConflict(function($){
+
+					function mainmenu() {
+						$('.sp-menu').spmenu({
+							startLevel: 0,
+							direction: 'ltr',
+							initOffset: {
+								x: 0,
+								y: 0
+							},
+							subOffset: {
+								x: 0,
+								y: 0
+							},
+							center: 0
+						});
+			}
+
+			mainmenu();
+
+			$(window).on('resize',function(){
+				mainmenu();
+			});
+
+
+			});
+var QvSite = 'http://tychinka52.ru/';
+	</script>
+    
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><link rel="stylesheet" type="text/css" media="screen" href="./index.php_files/index.css"></head>
+    
+    <body class="featured homepage  ltr preset2 menu-home responsive bg hfeed clearfix">
+		<div class="body-innerwrapper">
+        <!--[if lt IE 8]>
+        <div class="chromeframe alert alert-danger" style="text-align:center">You are using an <strong>outdated</strong> browser. Please <a target="_blank" href="http://browsehappy.com/">upgrade your browser</a> or <a target="_blank" href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</div>
+        <![endif]-->
+        <header id="sp-header-wrapper" class=" "><div class="container"><div class="row-fluid" id="header">
+<div id="sp-logo" class="span4">
+
+<div class="custom">
+	<p style="text-align: center;"><a title="Магазин цветов в Нижнем Новгороде" href="http://tychinka52.ru/"><img src="./index.php_files/logo.PNG" alt=""></a></p>
+<p style="font-size: 23px; color: #8b318d; transition: all 1s; text-align:center; line-height:1.1em;"><strong>Бесплатная доставка цветов</strong></p>
+<p style="font-size: 20px; text-align: center; color: #8b318d; transition: all 1s;"><strong>По Нижнему Новгороду</strong></p></div>
+</div>
+
+<div id="sp-garant" class="span4 visible-desktop">
+
+<div class="custom">
+	<p><img style="display: block; margin-left: auto; margin-right: auto;" src="./index.php_files/thebes1t.png" alt=""></p></div>
+</div>
+
+<div id="sp-position-0" class="span4 left6">
+
+<div class="custom">
+	<div class="phoneheader"><p style="font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; padding-top: 10%; font-variant: normal; letter-spacing: normal; line-height: 15.808px; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; color: #005602; font-weight: bold; padding-bottom: 10px; text-align: center;">Проблемы с выбором?</p>
+<p style="font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 39px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 15.808px; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; color: #005602; font-weight: bold; text-align: center;"><img src="./index.php_files/phone2.png" alt="" width="36" height="36">410-14-94</p>
+<p style="font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 15.808px; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; color: #005602; font-weight: bold; text-align: center;">режим работы: 9:00 -&nbsp;20:00</p>
+<p style="font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 15.808px; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; color: #005602; font-weight: bold; text-align: center;">доставка круглосуточно</p>
+  <br>
+  <br></div>
+<!-- validate-->
+    <script language="javascript" type="text/javascript">
+    	function getClientWidth()
+		{
+			return document.compatMode=='CSS1Compat' && document.documentElement.clientWidth;
+		}
+
+		function getClientHeight()
+		{
+			return document.compatMode=='CSS1Compat' && document.documentElement.clientHeight;
+		}
+
+		var top_block = Math.round((getClientHeight() - 330) / 2);
+		var left_block = Math.round((getClientWidth() - 288) / 2);
+		
+    	jQuery(function(){
+    		jQuery("#form_vopros").animate({ marginLeft: left_block, marginTop: top_block}, 0 );
+    		//jQuery("#form_border").animate({ opacity: 0}, 0 );
+    		
+    		jQuery("#close_callback").click(function(){
+				jQuery("#form_vopros").hide( 0, function(){
+						jQuery("#form_border").animate({
+						opacity: 1.0
+						}, 0, function(){
+							jQuery("#form_border").animate({
+							opacity: 0.0, marginLeft: 19, marginTop: 19, width: "29px", height: "33px"
+							}, 500, function() { jQuery("#layer_form").hide() } );
+						} );
+					}
+				);
+			});
+			
+			jQuery("#show_callback").click(function(){
+				jQuery("#layer_form").show();
+				jQuery("#form_border").animate({
+					opacity: 1.0, marginLeft: left_block+19, marginTop: top_block+19, width: "249px", height: "290px"
+					}, 500, function(){
+						jQuery("#form_border").animate({
+						opacity: 0.0
+						}, 0, function(){
+							jQuery("#form_vopros").show();
+						} );
+					}
+				);
+			});
+		});
+        function checkForm()
+        {
+        	var form = document.feedback_form;
+
+           if (form.name.value == "")
+           {
+                 alert( 'Введите ваше имя!' );
+                 form.name.focus();
+                 return false;
+           }
+           if (form.phone.value == "")
+           {
+                 alert( 'Введите телефон для связи с Вами' );
+                 form.phone.focus();
+                 return false;
+           }
+           return true;
+        }
+        </script>
+     <!-- end validate-->
+<div class="callback"><a id="show_callback" href="javascript:void(0)" title="Открыть">Заказать звонок</a></div>
+<div id="layer_form">
+	<div id="form_border"></div>
+	<div id="form_vopros" style="margin-left: 537px; margin-top: 237px;">
+	    <div id="bg_top"></div>
+	    <div id="bg_left"></div>
+	    <div id="form_cb">
+	    	<div id="form_close"><a id="close_callback" href="javascript:void(0)" title="Закрыть"><img src="./index.php_files/close.gif" border="0" width="15" height="15" alt="Закрыть"></a></div>
+	        <form action="http://tychinka52.ru/" method="post" name="feedback_form" class="form_items">
+	    		<input type="hidden" name="form_send" value="1">
+	            <div class="field_input">
+	            	<span>Ваше имя</span>
+	            	<div class="input_fon"><input type="text" name="name" class="input_cb"></div>
+	            </div>
+	            <div class="field_input">
+	            	<span>Контактный телефон</span>
+	            	<div class="input_fon"><input type="text" name="phone" class="input_cb"></div>
+	            </div>
+	            	            <div class="field_input">
+	            	<span>Удобное время звонка</span>
+	            	<div class="input_fon"><input type="text" name="time" class="input_cb"></div>
+	            </div>
+	            	            	            	<input type="hidden" name="kcaptcha_code" value="">
+	            	            <input type="hidden" name="title_cb" value="Тычинка52 - доставка цветов, купить цветы в Нижнем Новгороде">
+	            <div id="field_submit">
+	            	<input type="image" src="./index.php_files/send.gif" alt="Отправить" height="31" width="123" onclick="yaCounter25551908.reachGoal(&#39;callback&#39;); return true;">
+	            </div>
+	    	</form>
+</div>
+</div></div></div></div></div></div></header><section id="sp-feature-wrapper" class=" "><div class="container"><div class="row-fluid" id="feature">
+<div id="sp-menu" class="span12">	
+
+
+			<div id="sp-main-menu" class="visible-desktop">
+				<ul class="sp-menu level-0"><li class="menu-item active first"><a href="http://tychinka52.ru/" class="menu-item active first"><span class="menu"><span class="menu-title">Главная</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/kategorii" class="menu-item"><span class="menu"><span class="menu-title">Каталог</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/oplata-i-dostavka" class="menu-item"><span class="menu"><span class="menu-title">Оплата и доставка</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/otzyvy" class="menu-item"><span class="menu"><span class="menu-title">Оставить отзыв</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/kontakty" class="menu-item"><span class="menu"><span class="menu-title">Контакты</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/aktsii" class="menu-item"><span class="menu"><span class="menu-title">Акции</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/o-nas" class="menu-item"><span class="menu"><span class="menu-title">О нас</span></span></a></li><li class="menu-item last"><a href="http://tychinka52.ru/zainstagramlennye" class="menu-item last"><span class="menu"><span class="menu-title">Заинстаграмленные</span></span></a></li></ul>        
+			</div>  				
+			</div>
+</div></div></section>
