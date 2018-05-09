@@ -12,7 +12,6 @@ while ($row = mysqli_fetch_array($res))
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<script src="/sys/main.js"></script>
 	<style>
 		@media all and (max-width: 480px) {
 			.expand {
@@ -44,7 +43,19 @@ while ($row = mysqli_fetch_array($res))
 
 
 	<!DOCTYPE html>
-<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths mdl-js" lang="ru-ru" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths mdl-js" lang="ru-ru" style=""><!--<![endif]--><head>
+
+
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?154"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: 6473671, onlyWidgets: true});
+</script>
+	<script src="/sys/main.js"></script>
+
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
        <base href=".">
 	
@@ -164,107 +175,15 @@ var QvSite = 'http://tychinka52.ru/';
 <p style="font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 15.808px; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; color: #005602; font-weight: bold; text-align: center;">доставка круглосуточно</p>
   <br>
   <br></div>
-<!-- validate-->
-    <script language="javascript" type="text/javascript">
-    	function getClientWidth()
-		{
-			return document.compatMode=='CSS1Compat' && document.documentElement.clientWidth;
-		}
-
-		function getClientHeight()
-		{
-			return document.compatMode=='CSS1Compat' && document.documentElement.clientHeight;
-		}
-
-		var top_block = Math.round((getClientHeight() - 330) / 2);
-		var left_block = Math.round((getClientWidth() - 288) / 2);
-		
-    	jQuery(function(){
-    		jQuery("#form_vopros").animate({ marginLeft: left_block, marginTop: top_block}, 0 );
-    		//jQuery("#form_border").animate({ opacity: 0}, 0 );
-    		
-    		jQuery("#close_callback").click(function(){
-				jQuery("#form_vopros").hide( 0, function(){
-						jQuery("#form_border").animate({
-						opacity: 1.0
-						}, 0, function(){
-							jQuery("#form_border").animate({
-							opacity: 0.0, marginLeft: 19, marginTop: 19, width: "29px", height: "33px"
-							}, 500, function() { jQuery("#layer_form").hide() } );
-						} );
-					}
-				);
-			});
-			
-			jQuery("#show_callback").click(function(){
-				jQuery("#layer_form").show();
-				jQuery("#form_border").animate({
-					opacity: 1.0, marginLeft: left_block+19, marginTop: top_block+19, width: "249px", height: "290px"
-					}, 500, function(){
-						jQuery("#form_border").animate({
-						opacity: 0.0
-						}, 0, function(){
-							jQuery("#form_vopros").show();
-						} );
-					}
-				);
-			});
-		});
-        function checkForm()
-        {
-        	var form = document.feedback_form;
-
-           if (form.name.value == "")
-           {
-                 alert( 'Введите ваше имя!' );
-                 form.name.focus();
-                 return false;
-           }
-           if (form.phone.value == "")
-           {
-                 alert( 'Введите телефон для связи с Вами' );
-                 form.phone.focus();
-                 return false;
-           }
-           return true;
-        }
-        </script>
-     <!-- end validate-->
-<div class="callback"><a id="show_callback" href="javascript:void(0)" title="Открыть">Заказать звонок</a></div>
-<div id="layer_form">
-	<div id="form_border"></div>
-	<div id="form_vopros" style="margin-left: 537px; margin-top: 237px;">
-	    <div id="bg_top"></div>
-	    <div id="bg_left"></div>
-	    <div id="form_cb">
-	    	<div id="form_close"><a id="close_callback" href="javascript:void(0)" title="Закрыть"><img src="./index.php_files/close.gif" border="0" width="15" height="15" alt="Закрыть"></a></div>
-	        <form action="http://tychinka52.ru/" method="post" name="feedback_form" class="form_items">
-	    		<input type="hidden" name="form_send" value="1">
-	            <div class="field_input">
-	            	<span>Ваше имя</span>
-	            	<div class="input_fon"><input type="text" name="name" class="input_cb"></div>
-	            </div>
-	            <div class="field_input">
-	            	<span>Контактный телефон</span>
-	            	<div class="input_fon"><input type="text" name="phone" class="input_cb"></div>
-	            </div>
-	            	            <div class="field_input">
-	            	<span>Удобное время звонка</span>
-	            	<div class="input_fon"><input type="text" name="time" class="input_cb"></div>
-	            </div>
-	            	            	            	<input type="hidden" name="kcaptcha_code" value="">
-	            	            <input type="hidden" name="title_cb" value="Тычинка52 - доставка цветов, купить цветы в Нижнем Новгороде">
-	            <div id="field_submit">
-	            	<input type="image" src="./index.php_files/send.gif" alt="Отправить" height="31" width="123" onclick="yaCounter25551908.reachGoal(&#39;callback&#39;); return true;">
-	            </div>
-	    	</form>
-</div>
-</div></div></div></div></div></div></header><section id="sp-feature-wrapper" class=" "><div class="container"><div class="row-fluid" id="feature">
+</div></div></div></div></header><section id="sp-feature-wrapper" class=" "><div class="container"><div class="row-fluid" id="feature">
 <div id="sp-menu" class="span12">	
 
 
 			<div id="sp-main-menu" class="visible-desktop">
-				<ul class="sp-menu level-0"><li class="menu-item active first"><a href="http://tychinka52.ru/" class="menu-item active first"><span class="menu"><span class="menu-title">Главная</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/kategorii" class="menu-item"><span class="menu"><span class="menu-title">Каталог</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/oplata-i-dostavka" class="menu-item"><span class="menu"><span class="menu-title">Оплата и доставка</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/otzyvy" class="menu-item"><span class="menu"><span class="menu-title">Оставить отзыв</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/kontakty" class="menu-item"><span class="menu"><span class="menu-title">Контакты</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/aktsii" class="menu-item"><span class="menu"><span class="menu-title">Акции</span></span></a></li><li class="menu-item"><a href="http://tychinka52.ru/o-nas" class="menu-item"><span class="menu"><span class="menu-title">О нас</span></span></a></li><li class="menu-item last"><a href="http://tychinka52.ru/zainstagramlennye" class="menu-item last"><span class="menu"><span class="menu-title">Заинстаграмленные</span></span></a></li></ul>        
+				<ul class="sp-menu level-0">
+					<li class="menu-item active first"><a href="/" class="menu-item active first"><span class="menu"><span class="menu-title">Каталог</span></span></a></li>
+					<li class="menu-item"><a href="basket/" class="menu-item"><span class="menu"><span class="menu-title">Корзина</span></span></a></li>
+					<li class="menu-item"><a href="contact/" class="menu-item"><span class="menu"><span class="menu-title">Контакты</span></span></a></li></ul>        
 			</div>  				
 			</div>
 </div></div></section>
