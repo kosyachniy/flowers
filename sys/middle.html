@@ -45,7 +45,7 @@ if ($_SESSION['admin'] == 1) {
 if ($_SESSION['admin'] == 1) {
 	print '<a href="/delete.php?i=' . $row['id'] . '" style="color: red; font-size: 1.2rem; font-weight: bold;">Удалить</a>';
 } else {
-	print $row['price']. '₽';
+	print $row['price']. ' руб.'; //₽
 }
 
 											?></div>

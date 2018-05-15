@@ -90,7 +90,7 @@ print '</div>';
 if ($empty) {
 	print '<div style="margin: -20px 0 20px 10%;"><h2>Корзина пуста!</h2></div>';
 } else {
-	print '<a href="/buy"><div class="act">Заказать (' . $sum . '₽)</div></a>';
+	print '<a href="/buy"><div class="act">Заказать (' . $sum . ' руб.)</div></a>';
 }
 
 include('../sys/foot.html');

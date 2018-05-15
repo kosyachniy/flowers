@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_array($res)) {
 }
 
 print '</table>
-<h4>Общая сумма заказа: ' . $sum . '₽</h4>
+<h4>Общая сумма заказа: ' . $sum . ' руб.</h4>
 <form action="/order/index.php" method="post">
 	<input name="name" placeholder="Ваше имя" required>
 	<input name="surname" placeholder="Ваша фамилия">

@@ -1,5 +1,5 @@
 <?php
-$title = 'Заказ цветов';
+$title = 'Контакты';
 include('../sys/head.html');
 ?>
 

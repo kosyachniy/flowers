@@ -59,7 +59,7 @@ function deleteCookie(cname) {
 function basketon(elem, num, price) {
 	elem.setAttribute('class', 'button active');
 	elem.setAttribute('onclick', 'basketoff(this, ' + num + ', ' + price + ')');
-	elem.innerHTML = 'Добавлено в корзину (' + price + '₽)';
+	elem.innerHTML = 'Добавлено в корзину (' + price + ' руб.)';
 
 	var x = getCookie('basket') + num + '-';
 	deleteCookie('basket');
@@ -69,7 +69,7 @@ function basketon(elem, num, price) {
 function basketoff(elem, num, price) {
 	elem.setAttribute('class', 'button');
 	elem.setAttribute('onclick', 'basketon(this, ' + num + ', ' + price + ')');
-	elem.innerHTML = 'Добавить в корзину (' + price + '₽)';
+	elem.innerHTML = 'Добавить в корзину (' + price + ' руб.)';
 
 	var x = getCookie('basket').split('-');
 	//x = remove(x, num.toString());

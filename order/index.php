@@ -29,7 +29,7 @@ mysqli_query($db, "INSERT INTO `orders`(`name`, `surname`, `basket`, `price`, `t
 $id = mysqli_insert_id($db);
 
 $text .= '</table>
-<h4>Общая сумма заказа: ' . $sum . '₽</h4>
+<h4>Общая сумма заказа: ' . $sum . ' руб.</h4>
 '. $surname . ' ' . $name . ' (' . $tel . ')<br>
 Адрес: ' . $geo . '<br>
 Время: ' . $times . '<br>';

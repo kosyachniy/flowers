@@ -68,9 +68,9 @@ print '</select><br>
 <script>
 var x = <?=$row['id']?>;
 if (getCookie('basket').split('-').indexOf(x.toString()) != -1) {
-	document.write('<div onclick="basketoff(this, <?=$row['id']?>, <?=$row['price']?>);" class="button active">Добавлено в корзину (<?=$row['price']?>₽)</div>');
+	document.write('<div onclick="basketoff(this, <?=$row['id']?>, <?=$row['price']?>);" class="button active">Добавлено в корзину (<?=$row['price']?> руб.)</div>');
 } else {
-	document.write('<div onclick="basketon(this, <?=$row['id']?>, <?=$row['price']?>);" class="button">Добавить в корзину (<?=$row['price']?>₽)</div>');
+	document.write('<div onclick="basketon(this, <?=$row['id']?>, <?=$row['price']?>);" class="button">Добавить в корзину (<?=$row['price']?> руб.)</div>');
 }
 </script>
 
