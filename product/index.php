@@ -5,6 +5,119 @@ session_start();
 
 print '<style> .note div {color: #000; display: inline-block; vertical-align: top;}</style>';
 
+// print '<script src="/highslide/highslide.js" type="text/javascript"></script>
+// <link href="/highslide/highslide.css" rel="stylesheet" property="stylesheet" />
+// <script type="text/javascript">
+// 	hs.graphicsDir = \'/highslide/graphics/\';
+// </script>';
+/*print '<a href="/load/img/1.jpg" class="highslide" onclick="return hs.expand(this)">
+	<img src="/load/img/1.jpg" style="width: 100px;">
+</a>';
+*/
+// print '<style>
+// 	.blokimg1 {
+// 	position: relative;
+// 	}
+// 	.overlay1{
+// 	display: none;
+// 	height: auto;
+// 	left: -15%;
+// 	position: absolute;
+// 	top: -50%;
+// 	width: auto;
+// 	z-index: 999;
+// 	}
+// 	.overlay1 .overlay_container1{
+// 	display: table-cell;
+// 	vertical-align: middle;
+// 	}
+// 	.overlay_container1 img{
+// 	background-color: #AB5;
+// 	padding: 10px;
+// 	-webkit-border-radius: 5px;
+// 	-moz-border-radius: 5px;
+// 	}
+// 	.overlay1:target {
+// 	display: table;
+// 	}
+// </style>';
+
+// print '<div class="blokimg">
+// 	<div class="overlay" id="contenedor1">
+// 	<div class="overlay_container">
+// 		<a href="?i=' . $_GET['i'] . '#close">
+// 			<img src="/load/img/1.jpg">
+// 		</a>
+// 	</div>
+// 	</div>
+// 	<a href="?i=' . $_GET['i'] . '#contenedor1">
+// 		<img src="/load/img/1.jpg" id="imagenM1" style="height: 70px;">
+// 	</a>
+// 	</div>';
+?>
+<style>
+body {
+	margin:0;
+}
+
+.image1 {
+	margin:30px; 
+	cursor:pointer;
+	max-height:100px;
+}
+
+.popup {
+	position: fixed;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	display:none;
+	text-align:center;
+}
+
+.popup_bg {
+	background:rgba(0,0,0,0.4);
+	position:fixed;
+	z-index:1;
+	height:100%;
+	width:100%;
+}
+
+
+.popup_img {
+	position: relative;
+	margin:0 auto;
+	z-index:2;
+	max-height:94%;
+	max-width:94%;
+	margin:1% 0 0 0;
+}
+</style>
+<SCRIPT type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></SCRIPT>
+<script>
+$(document).ready(function() { // Ждём загрузки страницы
+	
+	$(".image1").click(function(){	// Событие клика на маленькое изображение
+	  	var img = $(this);	// Получаем изображение, на которое кликнули
+		var src = img.attr('src'); // Достаем из этого изображения путь до картинки
+		$("body").append("<div class='popup'>"+ //Добавляем в тело документа разметку всплывающего окна
+						 "<div class='popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
+						 "<img src='"+src+"' class='popup_img' />"+ // Само увеличенное фото
+						 "</div>"); 
+		$(".popup").fadeIn(800); // Медленно выводим изображение
+		$(".popup_bg").click(function(){	// Событие клика на затемненный фон	   
+			$(".popup").fadeOut(800);	// Медленно убираем всплывающее окно
+			setTimeout(function() {	// Выставляем таймер
+			  $(".popup").remove(); // Удаляем разметку всплывающего окна
+			}, 800);
+		});
+	});
+	
+});
+</script>
+<?php
+
 if ($_SESSION['admin'] == 1) {
 	print '
 <style>
@@ -33,7 +146,18 @@ $id = $_GET['i'];
 		print '</div><div class="note-cont">';
 
 		if ($_SESSION['admin'] == 1) {
-			print '<form action="edit.php?i=' . $id . '" method="post">
+			if (strlen($row['photos'])) {
+				print '<style>.img {display: inline-block; width: auto!important; margin: 0!important; text-align: center!important;}</style><br><center>';
+				$mas = explode(',', $row['photos']);
+				for ($i=1; $i<sizeof($mas); $i++) {
+					print '<div class="img"><img src="/load/img/' . $mas[$i] . '.jpg" style="height: 70px; width: auto; margin: 5px"><br><a href="del.php?id=' . $id . '&i=' . $i . '" style="color: red;">Удалить</a></div>';
+				}
+				print '</center><br>';
+			}
+			print '<form action="downloads.php?i=' . $id . '" method="post" enctype="multipart/form-data">
+	<input type="file" name="name" style="width: 90%; font-size: 0.9rem;">
+	<input type="submit" value="Загрузить" style="width: 90%;">
+</form><br><br><form action="edit.php?i=' . $id . '" method="post">
 		<input name="name" placeholder="Название" value="' . $row['name'] . '"><br>
     <select name="category" required>
     <option disabled>Выберите категорию</option>';
@@ -51,6 +175,29 @@ print '</select><br>
 		<textarea name="descr" placeholder="Короткое описание">' . $row['descr'] . '</textarea><br>
 		<textarea name="cont" placeholder="Полное описание">' . $row['cont'] . '</textarea><br>';
 		} else {
+			if (strlen($row['photos'])) {
+				print '<style>.note-cont img {display: inline-block; height: 70px; width: auto; margin: 5px;}</style><br><center>';
+				$mas = explode(',', $row['photos']);
+				for ($i=1; $i<sizeof($mas); $i++) {
+					print '<img src="/load/img/' . $mas[$i] . '.jpg" class="image1">';
+					// print '<div><a href="/load/img/' . $mas[$i] . '.jpg" class="highslide" onclick="return hs.expand(this)"><img src="/load/img/' . $mas[$i] . '.jpg" style="height: 70px; width: auto;"></a></div>';
+	// 				print '<div class="blokimg1">
+	// <div class="overlay1" id="contenedor1">
+	// <div class="overlay_container1">
+	// 	<a href="?i=' . $_GET['i'] . '#close">
+	// 		<img src="/load/img/1.jpg" style="z-index: 999;">
+	// 	</a>
+	// </div>
+	// </div>
+	// <a href="?i=' . $_GET['i'] . '#contenedor1">
+	// 	<img src="/load/img/1.jpg" id="imagenM1" style="width: 100px;">
+	// </a>
+	// </div>';
+					// print '<a href="/load/img/' . $mas[$i] . '.jpg" class="highslide" onclick="return hs.expand(this)"><img src="/load/img/' . $mas[$i] . '.jpg" style="height: 70px; width: auto;"></a>';
+					//print '<img src="/load/img/' . $mas[$i] . '.jpg" style="height: 70px; width: auto; margin: 5px">';
+				}
+				print '</center><br>';
+			}
 			print '<div style="color: #000;">' . nl2p($row['descr']) . '</div><div>' . nl2p($row['cont']) . '</div>';
 		}
 
