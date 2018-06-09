@@ -9,6 +9,13 @@ function change(min_width=480) {
 	}
 }
 
+function change2(elem) {
+	if (document.getElementsByClassName(elem)[0].style.display == 'block')
+		document.getElementsByClassName(elem)[0].style.display = 'none';
+	else
+		document.getElementsByClassName(elem)[0].style.display = 'block';
+}
+
 function place(elem, count=4, percent=100, margin=0, padding=0, max_width=1500, min_width=590) {
 	var head = document.head || document.getElementsByTagName('head')[0];
 	var style = document.getElementsByTagName('style')[0] || document.createElement('style');

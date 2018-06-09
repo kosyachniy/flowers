@@ -32,7 +32,8 @@ include('sys/head.html');
 <?php
 if ($_SESSION['admin'] == 1) {
     print '<div style="margin-left: 10%; width: 80%">
-<h2>Панель администратора</h2>
+<div style="border-bottom: 1px dashed blue; color: blue; cursor: pointer; width: auto;" onclick="change2(\'u-admin\');"><h2>Панель администратора</h2></div><br>
+<div style="display: none;" class="u-admin">
 <form action="edit.php" method="post">
     <input name="name" placeholder="Название компании" value="' . $set['name'] . '">
     <input name="tel" placeholder="Телефон" value="' . $set['tel'] . '">
@@ -43,10 +44,20 @@ if ($_SESSION['admin'] == 1) {
     <input name="insta" placeholder="Ссылка на инстаграмм" value="' . $set['insta'] . '">
     <input type="submit" value="Сохранить" style="width: 93%;"><br><br>
     <a href="out.php" style="color: red; font-size: 1.8rem; text-decoration: underline;">Выйти из режима администратора</a><br>
-</form><br><br>
-<h4>Добавить товар</h4>
+</form></div><br>
+<h4>Добавить товар</h4>';
+if ($_SESSION['photooo']) {
+    print '<b>Добавлено фото!</b>';
+} else {
+    print '<form action="download.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="name" style="width: 90%; font-size: 0.9rem;">
+    <input type="submit" value="Загрузить" style="width: 90%;"><br><br>
+<i>Сначала нужно загрузить!</i>
+</form>';
+}
+print '<br><br>
 <form action="add.php" method="post">
-    <input name="name" placeholder="Название" required>
+    <input name="name" placeholder="Название" required><br><br>
     <select name="category" required>
     <option disabled selected>Выберите категорию</option>';
 
@@ -55,14 +66,15 @@ if ($_SESSION['admin'] == 1) {
         print ' <option value="'. $row['id'] . '">' . $row['name'] . '</option>';
     }
 
-print '</select>
+print '</select> &nbsp; <b>Обязательное поле!</b>
     <textarea name="descr" placeholder="Короткое описание"></textarea>
     <textarea name="cont" placeholder="Полное описание"></textarea>
     <input name="price" placeholder="Цена" required><br>
     Приоритет: <input name="priority" value="50" style="width: 100px;">
     <input type="submit" value="Добавить" style="width: 93%;">
 </form><br><br>
-<h4>Добавить категорию</h4>
+<div style="border-bottom: 1px dashed blue; color: blue; cursor: pointer; width: auto;" onclick="change2(\'u-cat\');"><h4>Категории</h4></div>
+<div style="display: none;" class="u-cat"><h4>Добавить категорию</h4>
 <form action="catadd.php" method="post">
     <input name="name" placeholder="Название" required><br>
     Приоритет: <input name="priority" value="50" style="width: 100px;">
@@ -78,7 +90,7 @@ print '</select>
 
 print '
     <input type="submit" value="Изменить" style="width: 93%;">
-</form>
+</form></div>
 </div>'; 
 }
 ?>

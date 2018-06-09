@@ -17,9 +17,9 @@ if ($_SESSION['admin'] == 1) {
 	if ($descr) mysqli_query($db, "UPDATE `products` SET `descr`='$descr' WHERE `id`='$id';");
 	if ($cont) mysqli_query($db, "UPDATE `products` SET `cont`='$cont' WHERE `id`='$id';");
 	if ($price) mysqli_query($db, "UPDATE `products` SET `price`='$price' WHERE `id`='$id';");
-	if ($price) mysqli_query($db, "UPDATE `products` SET `priority`='$priority' WHERE `id`='$id';");
+	if ($priority) mysqli_query($db, "UPDATE `products` SET `priority`='$priority' WHERE `id`='$id';");
 	if ($category) mysqli_query($db, "UPDATE `products` SET `category`='$category' WHERE `id`='$id';");
 }
 
-header('location: ./?i=' . $id);
+header('location: ../');
 ?>
